@@ -4,9 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Desert Bloom Resort & Camp | Jaisalmer</title>
+    <!-- Tailwind CSS for modern styling -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome for crisp, modern communication & social media icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body class="bg-stone-50 text-stone-800 font-sans">
+
+    <!-- TOP RIGHT CONTACT & SOCIAL BAR -->
+    <div class="bg-amber-950 text-stone-200 text-xs sm:text-sm py-2 px-4 sm:px-8 flex justify-between items-center border-b border-amber-900/40">
+        <!-- Left Side: Simple Location Tag -->
+        <div class="hidden sm:flex items-center space-x-2">
+            <i class="fa-solid fa-location-dot text-amber-400"></i>
+            <span>Sam Sand Dunes, Jaisalmer, Rajasthan</span>
+        </div>
+        
+        <!-- Right Side: Contact & Social Media Action Buttons -->
+        <div class="flex items-center space-x-4 sm:space-x-6 ml-auto">
+            <!-- Call Button -->
+            <a href="tel:+919999999999" class="hover:text-amber-400 transition flex items-center space-x-1" title="Call Us Now">
+                <i class="fa-solid fa-phone text-amber-400"></i>
+                <span class="hidden md:inline">Call Now</span>
+            </a>
+            
+            <!-- Mail Button -->
+            <a href="mailto:info@desertbloomcamp.com" class="hover:text-amber-400 transition flex items-center space-x-1" title="Email Us">
+                <i class="fa-solid fa-envelope text-amber-400"></i>
+                <span class="hidden md:inline">Email Us</span>
+            </a>
+            
+            <!-- WhatsApp Button -->
+            <a href="https://wa.me/919999999999?text=Hi!%20I%20want%20to%20inquire%20about%20booking%20a%20stay%20at%20Desert%20Bloom." target="_blank" class="hover:text-green-400 text-green-500 font-semibold transition flex items-center space-x-1" title="Chat on WhatsApp">
+                <i class="fa-brands fa-whatsapp text-lg"></i>
+                <span class="hidden md:inline text-stone-200 hover:text-green-400">WhatsApp</span>
+            </a>
+
+            <!-- Divider Line -->
+            <span class="h-4 w-[1px] bg-amber-800/60"></span>
+
+            <!-- Facebook Page -->
+            <a href="https://facebook.com/your-page-username" target="_blank" class="hover:text-blue-400 text-base transition" title="Follow our Facebook Page">
+                <i class="fa-brands fa-facebook"></i>
+            </a>
+
+            <!-- Instagram Page -->
+            <a href="https://instagram.com/your-username" target="_blank" class="hover:text-pink-400 text-base transition" title="Follow us on Instagram">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+        </div>
+    </div>
 
     <!-- HERO SECTION -->
     <header class="relative h-96 bg-stone-900 flex items-center justify-center text-center px-4">
@@ -35,16 +81,16 @@
             <div class="grid md:grid-cols-2 gap-8">
                 <!-- Room Card 1: Royal Swiss Tent -->
                 <div class="bg-white rounded-lg overflow-hidden shadow-md">
-                    <img src="https://storage.googleapis.com/hireacamp/uploads/b46fca06d0e14d03a93cf8d1d327ddbf.jpeg" alt="Royal Swiss Tent" class="w-full h-48 object-cover">
+                    <img src="https://shrinathadventures.com/wp-content/uploads/2023/04/DSC02593_1024x683-780x520.jpg" alt="Royal Swiss Tent" class="w-full h-54 object-cover">
                     <div class="p-6">
                         <h4 class="text-xl font-serif font-bold mb-2 text-amber-800">Luxury Royal Swiss Tent</h4>
-                        <p class="text-stone-600 text-sm">Experience comfort in the wild. Fully air-conditioned premium fabric tents featuring modern en-suite bathrooms and traditional block-print interiors.</p>
+                        <p class="text-stone-600 text-sm">Experience comfort in the wild. Premium fabric tents featuring modern en-suite bathrooms, comfortable bedding, and traditional block-print interiors.</p>
                     </div>
                 </div>
 
                 <!-- Room Card 2: Luxury Mud Cottage -->
                 <div class="bg-white rounded-lg overflow-hidden shadow-md">
-                    <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=600&q=80" alt="Luxury AC Cabin" class="w-full h-48 object-cover">
+                    <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=600&q=80" alt="Luxury AC Cabin" class="w-full h-54 object-cover">
                     <div class="p-6">
                         <h4 class="text-xl font-serif font-bold mb-2 text-amber-800">Premium Desert Cottage</h4>
                         <p class="text-stone-600 text-sm">Handcrafted structures built with local golden sandstone, offering standard resort comforts blended with ethnic desert architecture.</p>
