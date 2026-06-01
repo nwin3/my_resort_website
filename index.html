@@ -12,7 +12,7 @@
 <body class="bg-stone-50 text-stone-800 font-sans">
 
     <!-- TOP RIGHT CONTACT & SOCIAL BAR -->
-    <div class="bg-amber-950 text-stone-200 text-xs sm:text-sm py-2 px-4 sm:px-8 flex justify-between items-center border-b border-amber-900/40">
+    <div class="bg-amber-950 text-stone-200 text-xs sm:text-sm py-2 px-4 sm:px-8 flex justify-between items-center border-b border-amber-900/40 relative z-30">
         <!-- Left Side: Simple Location Tag -->
         <div class="hidden sm:flex items-center space-x-2">
             <i class="fa-solid fa-location-dot text-amber-400"></i>
@@ -54,14 +54,17 @@
         </div>
     </div>
 
-    <!-- HERO SECTION -->
-    <header class="relative h-96 bg-stone-900 flex items-center justify-center text-center px-4">
-        <!-- Thar Desert sunset background image -->
-        <img src="https://tharcamelsafarijaisalmer.com/wp-content/uploads/2023/10/73_1050x1050.jpg" alt="Thar Desert Jaisalmer" class="absolute inset-0 w-full h-full object-cover opacity-60">
+    <!-- HERO SECTION WITH VIDEO BACKGROUND -->
+    <header class="relative h-[450px] bg-stone-900 flex items-center justify-center text-center px-4 overflow-hidden">
+        <!-- Cinematic Desert Video Background (Replace the src URL with your Firebase link in the future) -->
+        <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover opacity-50 z-10">
+            <source src="https://v1.padlet.pics/videos/b9efdfb3b5fc3b1b68ba5be5d8df2e73.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
         
-        <div class="relative z-10 text-white">
-            <h1 class="text-4xl md:text-6xl font-serif tracking-wide mb-4">Desert Bloom Resort & Camp</h1>
-            <p class="text-lg md:text-xl font-light tracking-widest text-amber-400 uppercase">An Authentic Thar Desert Experience</p>
+        <div class="relative z-20 text-white">
+            <h1 class="text-4xl md:text-6xl font-serif tracking-wide mb-4 drop-shadow-xl">Desert Bloom Resort & Camp</h1>
+            <p class="text-lg md:text-xl font-light tracking-widest text-amber-400 uppercase drop-shadow-md">An Authentic Thar Desert Experience</p>
         </div>
     </header>
 
