@@ -9,15 +9,24 @@
     <!-- FontAwesome for crisp, modern communication & social media icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
-        /* This perfectly crops the embedded player to look like a background banner */
-        .video-container {
+        /* Crops and stretches the YouTube iframe player to act as a seamless background banner */
+        .video-wrapper {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            overflow: hidden;
+        }
+        .video-wrapper iframe {
             position: absolute;
             top: 50%;
             left: 50%;
             width: 100vw;
-            height: 56.25vw; /* 16:9 Aspect Ratio */
-            min-height: 450px;
-            min-width: 177.77vh; /* 16:9 Aspect Ratio */
+            height: 56.25vw; /* 16:9 ratio */
+            min-height: 100%;
+            min-width: 177.77vh; /* 16:9 ratio */
             transform: translate(-50%, -50%);
         }
     </style>
@@ -67,16 +76,16 @@
         </div>
     </div>
 
-    <!-- HERO SECTION WITH IFRAME VIDEO BACKGROUND -->
+    <!-- HERO SECTION WITH YOUTUBE VIDEO BACKGROUND -->
     <header class="relative h-[450px] bg-stone-900 flex items-center justify-center text-center px-4 overflow-hidden">
         
-        <!-- Embedded Video Stream Player (Using trusted Vimeo Player infrastructure to pass firewalls) -->
-        <div class="absolute inset-0 pointer-events-none opacity-50 z-10 overflow-hidden">
-            <iframe class="video-container" src="https://player.vimeo.com/video/333748281?background=1&autoplay=1&loop=1&byline=0&title=0&muted=1" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+        <!-- YouTube Background Player (Configured to autoplay, mute, loop, and hide controls) -->
+        <div class="video-wrapper opacity-40 z-10">
+            <iframe src="https://www.youtube.com/embed/gH2v_g8gWIM?autoplay=1&mute=1&loop=1&playlist=gH2v_g8gWIM&controls=0&showinfo=0&rel=0&modestbranding=1&iv_load_policy=3" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         </div>
         
         <div class="relative z-20 text-white">
-            <h1 class="text-4xl md:text-6xl font-serif tracking-wide mb-4 drop-shadow-xl">Desert Bloom Resort & Camp</h1>
+            <h1 class="text-4xl md:text-6xl font-serif tracking-wide mb-4 pdf-shadow-xl">Desert Bloom Resort & Camp</h1>
             <p class="text-lg md:text-xl font-light tracking-widest text-amber-400 uppercase drop-shadow-md">An Authentic Thar Desert Experience</p>
         </div>
     </header>
