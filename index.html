@@ -8,6 +8,19 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- FontAwesome for crisp, modern communication & social media icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        /* This perfectly crops the embedded player to look like a background banner */
+        .video-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100vw;
+            height: 56.25vw; /* 16:9 Aspect Ratio */
+            min-height: 450px;
+            min-width: 177.77vh; /* 16:9 Aspect Ratio */
+            transform: translate(-50%, -50%);
+        }
+    </style>
 </head>
 <body class="bg-stone-50 text-stone-800 font-sans">
 
@@ -54,13 +67,13 @@
         </div>
     </div>
 
-    <!-- HERO SECTION WITH VIDEO BACKGROUND -->
+    <!-- HERO SECTION WITH IFRAME VIDEO BACKGROUND -->
     <header class="relative h-[450px] bg-stone-900 flex items-center justify-center text-center px-4 overflow-hidden">
-        <!-- Trusted Microsoft CDN Video Link - Bypasses Corporate Firewalls -->
-        <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover opacity-50 z-10">
-            <source src="https://amvprodcdn-a.akamaihd.net/learning/Edge_Animate/Overview/Edge_Animate_Overview.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
+        
+        <!-- Embedded Video Stream Player (Using trusted Vimeo Player infrastructure to pass firewalls) -->
+        <div class="absolute inset-0 pointer-events-none opacity-50 z-10 overflow-hidden">
+            <iframe class="video-container" src="https://player.vimeo.com/video/333748281?background=1&autoplay=1&loop=1&byline=0&title=0&muted=1" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+        </div>
         
         <div class="relative z-20 text-white">
             <h1 class="text-4xl md:text-6xl font-serif tracking-wide mb-4 drop-shadow-xl">Desert Bloom Resort & Camp</h1>
