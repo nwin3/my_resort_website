@@ -13,26 +13,26 @@
     <script src="/loader.js"></script>
 
     <!-- Update your main container class -->
-<main class="max-w-[90%] mx-auto py-16 px-6"> 
+<!-- Use this container structure -->
+<main class="w-full px-6 py-16">
     <h1 class="text-4xl font-serif text-amber-900 text-center mb-12">Our Gallery</h1>
 
-    <!-- Updated Grid: 2 columns on medium, 3 on large, 4 on extra large -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+    <!-- The magic happens in the grid class below -->
+    <div class="grid gap-6" style="grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));">
         
         <!-- Image 1 -->
         <div class="overflow-hidden rounded-xl shadow-lg">
-            <!-- Increased height to h-80 (from h-64) for larger images -->
-            <img src="../assets/royal_swiss_tents.png" alt="Desert Landscape" class="w-full h-80 object-cover hover:scale-105 transition duration-500">
+            <img src="../assets/royal_swiss_tents.png" alt="Royal Swiss Tents" class="w-full h-80 object-cover hover:scale-105 transition duration-500">
         </div>
         
         <!-- Image 2 -->
         <div class="overflow-hidden rounded-xl shadow-lg">
-            <img src="../assets/premium_mud_cottage.png" alt="Luxury Tent" class="w-full h-80 object-cover hover:scale-105 transition duration-500">
+            <img src="../assets/premium_mud_cottage.png" alt="Premium Mud Cottage" class="w-full h-80 object-cover hover:scale-105 transition duration-500">
         </div>
         
         <!-- Image 3 -->
         <div class="overflow-hidden rounded-xl shadow-lg">
-            <img src="../assets/family_desert_suite.png" alt="Camel Safari" class="w-full h-80 object-cover hover:scale-105 transition duration-500">
+            <img src="../assets/family_desert_suite.png" alt="Family Desert Suite" class="w-full h-80 object-cover hover:scale-105 transition duration-500">
         </div>
         
     </div>
