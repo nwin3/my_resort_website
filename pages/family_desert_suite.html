@@ -38,14 +38,27 @@
             <!-- Inquiry Form -->
             <div class="bg-white p-8 rounded-xl shadow-sm border border-stone-100">
                 <h3 class="text-xl font-bold mb-4">Check Availability</h3>
-                <form action="#" method="POST" class="space-y-4">
-                    <input type="text" placeholder="Your Name" class="w-full p-2 border rounded">
-                    <input type="email" placeholder="Email Address" class="w-full p-2 border rounded">
-                    <input type="date" class="w-full p-2 border rounded">
-                    <button type="submit" class="w-full bg-amber-900 text-white py-2 rounded hover:bg-amber-800">
-                        Send Inquiry
-                    </button>
+                <form id="inquiryForm" class="space-y-4">
+                    <input type="text" name="name" id="name" placeholder="Your Name" class="w-full p-2 border rounded" required>
+                    <input type="email" name="email" id="email" placeholder="Email Address" class="w-full p-2 border rounded" required>
+                    <input type="date" name="date" id="date" class="w-full p-2 border rounded" required>
+                    <button type="submit" class="w-full bg-amber-900 text-white py-2 rounded">Send Inquiry</button>
                 </form>
+
+<script>
+    const form = document.getElementById('inquiryForm');
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const formData = new FormData(form);
+        // Replace with your actual Web App URL
+        fetch('https://script.google.com/macros/s/AKfycbzlKMC4-1bUSZ9J6ttXvEAPmfeNFjeTiUrAiY9GDFc00a7OqDxh6-pm6jNdWDnRvVtV/exec', {
+            method: 'POST',
+            body: formData
+        })
+        .then(() => alert('Inquiry sent successfully!'))
+        .catch(error => console.error('Error!', error));
+    });
+</script>
             </div>
         </div>
     </main>
