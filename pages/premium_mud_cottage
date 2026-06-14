@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Family Desert Suite | Desert Bloom Resort</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-stone-50 text-stone-800">
+
+    <!-- Header -->
+    <header class="py-10 text-center">
+        <h1 class="text-4xl font-serif text-amber-900">Family Desert Suite</h1>
+    </header>
+
+    <main class="max-w-4xl mx-auto px-6 pb-16">
+        <!-- Image Gallery: Ensure this filename matches the one you saved in assets/ -->
+        <img src="../assets/family_desert_suite.png" alt="Family Desert Suite Interior" class="w-full h-96 object-cover rounded-xl shadow-lg mb-8">
+
+        <div class="grid md:grid-cols-2 gap-12">
+            <!-- Room Description -->
+            <div>
+                <h2 class="text-2xl font-serif mb-4">Spacious Comfort for the Whole Family</h2>
+                <p class="text-stone-600 leading-relaxed mb-6">
+                    Designed with families in mind, our Family Desert Suite offers an expansive living space 
+                    that combines traditional Rajasthani elegance with modern convenience. Enjoy panoramic 
+                    views of the dunes from the comfort of your room, featuring dual sleeping areas and 
+                    plenty of space to relax together after a day of desert adventures.
+                </p>
+                <ul class="list-disc list-inside text-stone-700 space-y-2">
+                    <li>Expansive Suite Layout</li>
+                    <li>Dual Queen Beds</li>
+                    <li>Panoramic Desert View Windows</li>
+                    <li>Family-Friendly Amenities</li>
+                </ul>
+            </div>
+
+            <!-- Inquiry Form -->
+            <div class="bg-white p-8 rounded-xl shadow-sm border border-stone-100">
+                <h3 class="text-xl font-bold mb-4">Check Availability</h3>
+                <form action="#" method="POST" class="space-y-4">
+                    <input type="text" placeholder="Your Name" class="w-full p-2 border rounded">
+                    <input type="email" placeholder="Email Address" class="w-full p-2 border rounded">
+                    <input type="date" class="w-full p-2 border rounded">
+                    <button type="submit" class="w-full bg-amber-900 text-white py-2 rounded hover:bg-amber-800">
+                        Send Inquiry
+                    </button>
+                </form>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
