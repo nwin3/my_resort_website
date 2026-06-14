@@ -1,52 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Premium Mud Cottage | Desert Bloom Resort</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
+
 <body class="bg-stone-50 text-stone-800">
 
-    <!-- Header -->
     <header class="py-10 text-center">
         <h1 class="text-4xl font-serif text-amber-900">Premium Mud Cottage</h1>
     </header>
 
     <main class="max-w-4xl mx-auto px-6 pb-16">
-        <!-- Image Gallery: Ensure this filename matches the one you saved in assets/ -->
-        <img src="../assets/premium_mud_cottage.png" alt="Premium Mud Cottage Exterior" class="w-full h-96 object-cover rounded-xl shadow-lg mb-8">
+        <img src="../assets/premium_mud_cottage.png" alt="Premium Mud Cottage Interior"
+            class="w-full h-96 object-cover rounded-xl shadow-lg mb-8">
 
         <div class="grid md:grid-cols-2 gap-12">
-            <!-- Room Description -->
             <div>
-                <h2 class="text-2xl font-serif mb-4">Authentic Rustic Elegance</h2>
+                <h2 class="text-2xl font-serif mb-4">Authentic Rustic Luxury</h2>
                 <p class="text-stone-600 leading-relaxed mb-6">
-                    Our Premium Mud Cottages offer an authentic desert living experience without compromising on luxury. 
-                    Built with traditional techniques, these cottages stay naturally cool and feature bespoke 
-                    handcrafted interiors, offering a unique, serene retreat amidst the golden dunes.
+                    Stay in our handcrafted mud cottages, built with traditional earth-friendly materials. 
+                    Designed to stay naturally cool, these cottages offer an authentic desert 
+                    experience with all the high-end modern amenities you need for a comfortable stay.
                 </p>
                 <ul class="list-disc list-inside text-stone-700 space-y-2">
-                    <li>Handcrafted Earthy Decor</li>
-                    <li>Attached Modern Bathroom</li>
-                    <li>Spacious Private Veranda</li>
-                    <li>Naturally Thermally Insulated</li>
+                    <li>Traditional Earth Architecture</li>
+                    <li>Naturally Cool Interiors</li>
+                    <li>Modern Luxury Amenities</li>
+                    <li>Authentic Desert Ambiance</li>
                 </ul>
             </div>
 
-            <!-- Inquiry Form -->
             <div class="bg-white p-8 rounded-xl shadow-sm border border-stone-100">
                 <h3 class="text-xl font-bold mb-4">Check Availability</h3>
-                <form action="#" method="POST" class="space-y-4">
-                    <input type="text" placeholder="Your Name" class="w-full p-2 border rounded">
-                    <input type="email" placeholder="Email Address" class="w-full p-2 border rounded">
-                    <input type="date" class="w-full p-2 border rounded">
-                    <button type="submit" class="w-full bg-amber-900 text-white py-2 rounded hover:bg-amber-800">
-                        Send Inquiry
-                    </button>
+                <form id="inquiryForm" class="space-y-4">
+                    <input type="hidden" name="roomType" value="Premium Mud Cottage">
+                    
+                    <input type="text" name="name" id="name" placeholder="Your Name" class="w-full p-2 border rounded" required>
+
+                    <div class="flex gap-2">
+                        <select name="countryCode" id="countryCode" class="p-2 border rounded bg-white w-1/3"></select>
+                        <input type="tel" name="phone" placeholder="Phone Number" class="w-full p-2 border rounded" required>
+                    </div>
+                    
+                    <input type="email" name="email" id="email" placeholder="Email Address" class="w-full p-2 border rounded" required>
+                    
+                    <input type="date" name="date" id="date" class="w-full p-2 border rounded" required>
+                    
+                    <button type="submit" class="w-full bg-amber-900 text-white py-2 rounded">Send Inquiry</button>
                 </form>
+
+                <script src="country.js"></script>
+                <script>populateCountryCodes('countryCode');</script>
+                <script src="form_handler.js"></script>
             </div>
         </div>
     </main>
 </body>
+
 </html>
