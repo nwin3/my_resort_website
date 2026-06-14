@@ -14,27 +14,34 @@
 
     <!-- Update your main container class -->
 <!-- Use this container structure -->
-<main class="w-full px-6 py-16">
+<!-- We use 'w-full' to ensure the main container takes the full width -->
+<main class="w-full px-4 md:px-8 py-16">
     <h1 class="text-4xl font-serif text-amber-900 text-center mb-12">Our Gallery</h1>
 
-    <!-- The magic happens in the grid class below -->
-    <div class="grid gap-6" style="grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));">
+    <!-- 
+       'grid-cols-1' -> Mobile: 1 image
+       'md:grid-cols-2' -> Tablet: 2 images
+       'xl:grid-cols-3' -> Large Desktop: 3 images
+       '2xl:grid-cols-4' -> Huge screens: 4 images
+       'w-full' -> Ensures the grid occupies 100% of the parent width
+    -->
+    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-6 w-full">
         
         <!-- Image 1 -->
-        <div class="overflow-hidden rounded-xl shadow-lg">
+        <div class="overflow-hidden rounded-xl shadow-lg w-full">
             <img src="../assets/royal_swiss_tents.png" alt="Royal Swiss Tents" class="w-full h-80 object-cover hover:scale-105 transition duration-500">
         </div>
         
         <!-- Image 2 -->
-        <div class="overflow-hidden rounded-xl shadow-lg">
+        <div class="overflow-hidden rounded-xl shadow-lg w-full">
             <img src="../assets/premium_mud_cottage.png" alt="Premium Mud Cottage" class="w-full h-80 object-cover hover:scale-105 transition duration-500">
         </div>
         
         <!-- Image 3 -->
-        <div class="overflow-hidden rounded-xl shadow-lg">
+        <div class="overflow-hidden rounded-xl shadow-lg w-full">
             <img src="../assets/family_desert_suite.png" alt="Family Desert Suite" class="w-full h-80 object-cover hover:scale-105 transition duration-500">
         </div>
-        
+
     </div>
 </main>
 
