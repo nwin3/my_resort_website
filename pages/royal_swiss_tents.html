@@ -25,19 +25,7 @@
 
             <div class="bg-white p-8 rounded-xl shadow-sm border border-stone-100">
                 <h3 class="text-xl font-bold mb-4">Check Availability</h3>
-                <form id="inquiryForm" class="space-y-4">
-                    <input type="hidden" name="roomType" value="Royal Swiss Tents">
-                    <input type="text" name="name" placeholder="Your Name" class="w-full p-2 border rounded" required>
-                    
-                    <div class="flex gap-2">
-                        <select name="countryCode" id="countryCode" class="p-2 border rounded bg-white w-1/3"></select>
-                        <input type="tel" name="phone" placeholder="Phone Number" class="w-full p-2 border rounded" required>
-                    </div>
-                    
-                    <input type="email" name="email" placeholder="Email Address" class="w-full p-2 border rounded" required>
-                    <input type="date" name="date" class="w-full p-2 border rounded" required>
-                    <button type="submit" class="w-full bg-amber-900 text-white py-2 rounded">Send Inquiry</button>
-                </form>
+            
 
                 <script src="country.js"></script>
                 <script>populateCountryCodes('countryCode');</script>
