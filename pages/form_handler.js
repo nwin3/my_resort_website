@@ -6,7 +6,7 @@ form.addEventListener('submit', function (e) {
     submitBtn.disabled = true;
     submitBtn.innerText = "Sending...";
     
-    fetch(https://script.google.com/macros/s/AKfycbzlKMC4-1bUSZ9J6ttXvEAPmfeNFjeTiUrAiY9GDFc00a7OqDxh6-pm6jNdWDnRvVtV/exec', {
+    fetch('https://script.google.com/macros/s/AKfycbzlKMC4-1bUSZ9J6ttXvEAPmfeNFjeTiUrAiY9GDFc00a7OqDxh6-pm6jNdWDnRvVtV/exec', {
         method: 'POST',
         body: new URLSearchParams(new FormData(form)),
         redirect: 'follow'
