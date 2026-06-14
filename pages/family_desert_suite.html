@@ -49,14 +49,28 @@
     const form = document.getElementById('inquiryForm');
     form.addEventListener('submit', function(e) {
         e.preventDefault();
-        const formData = new FormData(form);
-        // Replace with your actual Web App URL
+        
+        const formData = new URLSearchParams(new FormData(form));
+        
         fetch('https://script.google.com/macros/s/AKfycbzlKMC4-1bUSZ9J6ttXvEAPmfeNFjeTiUrAiY9GDFc00a7OqDxh6-pm6jNdWDnRvVtV/exec', {
             method: 'POST',
-            body: formData
+            body: formData,
+            // 'follow' is the key here to handle the redirect
+            redirect: 'follow' 
         })
-        .then(() => alert('Inquiry sent successfully!'))
-        .catch(error => console.error('Error!', error));
+        .then(response => {
+            // Even if it redirects, we check if it was successful
+            if (response.ok) {
+                alert('Inquiry sent successfully!');
+                form.reset();
+            } else {
+                throw new Error('Network response was not ok.');
+            }
+        })
+        .catch(error => {
+            console.error('Error!', error);
+            alert('Something went wrong. Please check the console.');
+        });
     });
 </script>
             </div>
