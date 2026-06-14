@@ -57,10 +57,17 @@
                         <label class="block text-sm font-medium mb-1 text-stone-700">Your Name</label>
                         <input type="text" name="name" class="w-full p-2 border border-stone-300 rounded focus:ring-2 focus:ring-amber-600 outline-none" required>
                     </div>
+                    
+                    <div class="flex gap-2">
+                        <select name="countryCode" id="countryCode" class="p-2 border rounded bg-white w-1/3"></select>
+                        <input type="tel" name="phone" placeholder="Phone Number" class="w-full p-2 border rounded" required>
+                    </div>
+
                     <div>
                         <label class="block text-sm font-medium mb-1 text-stone-700">Email Address</label>
                         <input type="email" name="email" class="w-full p-2 border border-stone-300 rounded focus:ring-2 focus:ring-amber-600 outline-none" required>
                     </div>
+                    
                     <div>
                         <label class="block text-sm font-medium mb-1 text-stone-700">Inquiry Subject</label>
                         <select name="subject" class="w-full p-2 border border-stone-300 rounded focus:ring-2 focus:ring-amber-600 outline-none">
@@ -69,6 +76,7 @@
                             <option>Group/Event Booking</option>
                         </select>
                     </div>
+                    
                     <div>
                         <label class="block text-sm font-medium mb-1 text-stone-700">Message</label>
                         <textarea name="message" rows="4" class="w-full p-2 border border-stone-300 rounded focus:ring-2 focus:ring-amber-600 outline-none"></textarea>
