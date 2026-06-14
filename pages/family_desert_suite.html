@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Family Desert Suite | Desert Bloom Resort</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
+
 <body class="bg-stone-50 text-stone-800">
 
     <!-- Header -->
@@ -15,16 +17,17 @@
 
     <main class="max-w-4xl mx-auto px-6 pb-16">
         <!-- Image Gallery: Ensure this filename matches the one you saved in assets/ -->
-        <img src="../assets/family_desert_suite.png" alt="Family Desert Suite Interior" class="w-full h-96 object-cover rounded-xl shadow-lg mb-8">
+        <img src="../assets/family_desert_suite.png" alt="Family Desert Suite Interior"
+            class="w-full h-96 object-cover rounded-xl shadow-lg mb-8">
 
         <div class="grid md:grid-cols-2 gap-12">
             <!-- Room Description -->
             <div>
                 <h2 class="text-2xl font-serif mb-4">Spacious Comfort for the Whole Family</h2>
                 <p class="text-stone-600 leading-relaxed mb-6">
-                    Designed with families in mind, our Family Desert Suite offers an expansive living space 
-                    that combines traditional Rajasthani elegance with modern convenience. Enjoy panoramic 
-                    views of the dunes from the comfort of your room, featuring dual sleeping areas and 
+                    Designed with families in mind, our Family Desert Suite offers an expansive living space
+                    that combines traditional Rajasthani elegance with modern convenience. Enjoy panoramic
+                    views of the dunes from the comfort of your room, featuring dual sleeping areas and
                     plenty of space to relax together after a day of desert adventures.
                 </p>
                 <ul class="list-disc list-inside text-stone-700 space-y-2">
@@ -39,55 +42,58 @@
             <div class="bg-white p-8 rounded-xl shadow-sm border border-stone-100">
                 <h3 class="text-xl font-bold mb-4">Check Availability</h3>
                 <form id="inquiryForm" class="space-y-4">
-                    <input type="text" name="name" id="name" placeholder="Your Name" class="w-full p-2 border rounded" required>
-                    <input type="email" name="email" id="email" placeholder="Email Address" class="w-full p-2 border rounded" required>
+                    <input type="text" name="name" id="name" placeholder="Your Name" class="w-full p-2 border rounded"
+                        required>
+                    <input type="email" name="email" id="email" placeholder="Email Address"
+                        class="w-full p-2 border rounded" required>
                     <input type="date" name="date" id="date" class="w-full p-2 border rounded" required>
                     <button type="submit" class="w-full bg-amber-900 text-white py-2 rounded">Send Inquiry</button>
                 </form>
 
 
-<script>
-    const form = document.getElementById('inquiryForm');
-    const submitBtn = form.querySelector('button[type="submit"]');
+                <script>
+                    const form = document.getElementById('inquiryForm');
+                    const submitBtn = form.querySelector('button[type="submit"]');
 
-    form.addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        // 1. Disable the button and change text
-        submitBtn.disabled = true;
-        submitBtn.innerText = "Sending...";
-        submitBtn.classList.add('opacity-50', 'cursor-not-allowed');
+                    form.addEventListener('submit', function (e) {
+                        e.preventDefault();
 
-        const formData = new URLSearchParams(new FormData(form));
-        
-        fetch('https://script.google.com/macros/s/AKfycbzlKMC4-1bUSZ9J6ttXvEAPmfeNFjeTiUrAiY9GDFc00a7OqDxh6-pm6jNdWDnRvVtV/exec', {
-            method: 'POST',
-            body: formData,
-            redirect: 'follow'
-        })
-        .then(response => {
-            if (response.ok) {
-                alert('Inquiry sent successfully!');
-                form.reset();
-            } else {
-                throw new Error('Network response was not ok.');
-            }
-        })
-        .catch(error => {
-            console.error('Error!', error);
-            alert('Something went wrong. Please try again.');
-        })
-        .finally(() => {
-            // 2. Re-enable the button regardless of success or failure
-            submitBtn.disabled = false;
-            submitBtn.innerText = "Send Inquiry";
-            submitBtn.classList.remove('opacity-50', 'cursor-not-allowed');
-        });
-    });
-</script>
-                
+                        // 1. Disable the button and change text
+                        submitBtn.disabled = true;
+                        submitBtn.innerText = "Sending...";
+                        submitBtn.classList.add('opacity-50', 'cursor-not-allowed');
+
+                        const formData = new URLSearchParams(new FormData(form));
+
+                        fetch('https://script.google.com/macros/s/AKfycbzlKMC4-1bUSZ9J6ttXvEAPmfeNFjeTiUrAiY9GDFc00a7OqDxh6-pm6jNdWDnRvVtV/exec', {
+                            method: 'POST',
+                            body: formData,
+                            redirect: 'follow'
+                        })
+                            .then(response => {
+                                if (response.ok) {
+                                    alert('Inquiry sent successfully!');
+                                    form.reset();
+                                } else {
+                                    throw new Error('Network response was not ok.');
+                                }
+                            })
+                            .catch(error => {
+                                console.error('Error!', error);
+                                alert('Something went wrong. Please try again.');
+                            })
+                            .finally(() => {
+                                // 2. Re-enable the button regardless of success or failure
+                                submitBtn.disabled = false;
+                                submitBtn.innerText = "Send Inquiry";
+                                submitBtn.classList.remove('opacity-50', 'cursor-not-allowed');
+                            });
+                    });
+                </script>
+
             </div>
         </div>
     </main>
 </body>
+
 </html>
