@@ -1,12 +1,38 @@
-<!-- navbar.html -->
-<nav class="bg-white shadow-md sticky top-0 z-50">
+<!-- navbar.html --><nav class="bg-white shadow-md sticky top-0 z-50">
     <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+        <!-- Logo -->
         <a href="/index.html" class="text-2xl font-serif font-bold text-amber-900">Desert Bloom</a>
-        <div class="flex space-x-6 font-medium text-stone-700">
+
+        <!-- Desktop Links (Hidden on mobile) -->
+        <div class="hidden md:flex space-x-6 font-medium text-stone-700">
             <a href="/index.html#booking" class="hover:text-amber-800 transition">Booking</a>
             <a href="/pages/experience.html" class="hover:text-amber-800 transition">Experiences</a>
             <a href="/pages/gallery.html" class="hover:text-amber-800 transition">Gallery</a>
             <a href="/pages/contact_us.html" class="hover:text-amber-800 transition">Contact Us</a>
         </div>
+
+        <!-- Hamburger Button (Visible only on mobile) -->
+        <button id="menu-btn" class="md:hidden text-amber-900 focus:outline-none">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+        </button>
+    </div>
+
+    <!-- Mobile Menu (Hidden by default) -->
+    <div id="mobile-menu" class="hidden md:hidden bg-stone-50 border-t border-stone-200 p-6 space-y-4 text-center">
+        <a href="/index.html#booking" class="block text-stone-700 font-medium hover:text-amber-800">Booking</a>
+        <a href="/pages/experience.html" class="block text-stone-700 font-medium hover:text-amber-800">Experiences</a>
+        <a href="/pages/gallery.html" class="block text-stone-700 font-medium hover:text-amber-800">Gallery</a>
+        <a href="/pages/contact_us.html" class="block text-stone-700 font-medium hover:text-amber-800">Contact Us</a>
     </div>
 </nav>
+
+<script>
+    const btn = document.getElementById('menu-btn');
+    const menu = document.getElementById('mobile-menu');
+
+    btn.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+    });
+</script>
