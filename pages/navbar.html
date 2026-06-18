@@ -31,20 +31,23 @@
 
 <!-- JavaScript: Ensure this is at the bottom of your <body> -->
 <script>
-  // Wait for the entire page to load before running the code
-  document.addEventListener('DOMContentLoaded', () => {
+  (function() {
+    console.log("Script loaded successfully"); // You should see this immediately
+    
     const menuButton = document.getElementById('mobile-menu-button');
     const mobileMenu = document.getElementById('mobile-menu');
 
-    // Add a check to see if the elements exist
-    if (menuButton && mobileMenu) {
-      menuButton.addEventListener('click', () => {
-        // Toggle the 'hidden' class
-        mobileMenu.classList.toggle('hidden');
-        console.log('Menu toggled!'); // Check your console to see if this appears
-      });
+    if (menuButton) {
+      menuButton.onclick = function(e) {
+        console.log("Button clicked!"); // Watch for this in Eruda
+        if (mobileMenu) {
+          mobileMenu.classList.toggle('hidden');
+        } else {
+          console.error("mobile-menu element not found!");
+        }
+      };
     } else {
-      console.error('Menu elements not found! Check your HTML IDs.');
+      console.error("mobile-menu-button element not found!");
     }
-  });
+  })();
 </script>
