@@ -1,27 +1,28 @@
-<nav class="bg-white shadow-md sticky top-0 z-50">
-    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-        <a href="/index.html" class="text-2xl font-serif font-bold text-amber-900">Desert Bloom</a>
+ <nav style="background: white; padding: 1rem; border-bottom: 1px solid #e5e7eb;">
+  <div style="display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: auto;">
+    
+    <!-- Logo -->
+    <div style="font-weight: bold; font-size: 1.5rem; color: #78350f;">Desert Bloom</div>
 
-        <input type="checkbox" id="menu-toggle" class="hidden peer">
-        
-        <label for="menu-toggle" class="md:hidden text-amber-900 cursor-pointer">
-            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-            </svg>
-        </label>
+    <!-- Mobile Button -->
+    <button id="hamburger" style="display: block; cursor: pointer; border: none; background: none;">
+      <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2">
+        <path d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
+    </button>
+  </div>
 
-        <div class="hidden md:flex space-x-6 font-medium text-stone-700">
-            <a href="/index.html#booking" class="hover:text-amber-800 transition">Booking</a>
-            <a href="/pages/experience.html" class="hover:text-amber-800 transition">Experiences</a>
-            <a href="/pages/gallery.html" class="hover:text-amber-800 transition">Gallery</a>
-            <a href="/pages/contact_us.html" class="hover:text-amber-800 transition">Contact Us</a>
-        </div>
-    </div>
-
-    <div class="hidden peer-checked:block md:hidden bg-stone-50 border-t border-stone-200 p-6 space-y-4 text-center">
-        <a href="/index.html#booking" class="block text-stone-700 font-medium hover:text-amber-800">Booking</a>
-        <a href="/pages/experience.html" class="block text-stone-700 font-medium hover:text-amber-800">Experiences</a>
-        <a href="/pages/gallery.html" class="block text-stone-700 font-medium hover:text-amber-800">Gallery</a>
-        <a href="/pages/contact_us.html" class="block text-stone-700 font-medium hover:text-amber-800">Contact Us</a>
-    </div>
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" style="display: none; padding: 1rem; text-align: center; border-top: 1px solid #eee;">
+    <a href="#" style="display: block; padding: 0.5rem; text-decoration: none; color: #333;">Booking</a>
+    <a href="#" style="display: block; padding: 0.5rem; text-decoration: none; color: #333;">Experiences</a>
+    <a href="#" style="display: block; padding: 0.5rem; text-decoration: none; color: #333;">Gallery</a>
+  </div>
 </nav>
+
+<script>
+  document.getElementById('hamburger').addEventListener('click', function() {
+    const menu = document.getElementById('mobile-menu');
+    menu.style.display = (menu.style.display === 'none') ? 'block' : 'none';
+  });
+</script>
