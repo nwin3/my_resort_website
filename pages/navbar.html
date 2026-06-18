@@ -1,53 +1,27 @@
-<!-- Main Navigation -->
 <nav class="bg-white shadow-md sticky top-0 z-50">
-  <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-    <!-- Logo -->
-    <a href="/index.html" class="text-2xl font-serif font-bold text-amber-900">Desert Bloom</a>
+    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+        <a href="/index.html" class="text-2xl font-serif font-bold text-amber-900">Desert Bloom</a>
 
-    <!-- Desktop Menu: Hidden on mobile (hidden), Visible on desktop (md:flex) -->
-    <div class="hidden md:flex space-x-6 font-medium text-stone-700">
-      <a href="/index.html#booking" class="hover:text-amber-800 transition">Booking</a>
-      <a href="/pages/experience.html" class="hover:text-amber-800 transition">Experiences</a>
-      <a href="/pages/gallery.html" class="hover:text-amber-800 transition">Gallery</a>
-      <a href="/pages/contact_us.html" class="hover:text-amber-800 transition">Contact Us</a>
+        <input type="checkbox" id="menu-toggle" class="hidden peer">
+        
+        <label for="menu-toggle" class="md:hidden text-amber-900 cursor-pointer">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+        </label>
+
+        <div class="hidden md:flex space-x-6 font-medium text-stone-700">
+            <a href="/index.html#booking" class="hover:text-amber-800 transition">Booking</a>
+            <a href="/pages/experience.html" class="hover:text-amber-800 transition">Experiences</a>
+            <a href="/pages/gallery.html" class="hover:text-amber-800 transition">Gallery</a>
+            <a href="/pages/contact_us.html" class="hover:text-amber-800 transition">Contact Us</a>
+        </div>
     </div>
 
-    <!-- Hamburger Button: Visible on mobile (md:hidden) -->
-    <button id="mobile-menu-button" class="md:hidden text-amber-900 focus:outline-none p-2">
-      <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-      </svg>
-    </button>
-  </div>
-
-  <!-- Mobile Menu: Hidden by default, toggled via JS -->
-  <div id="mobile-menu" class="hidden md:hidden bg-stone-50 border-t border-stone-200 p-6 space-y-4">
-    <a href="/index.html#booking" class="block text-stone-700 font-medium hover:text-amber-800">Booking</a>
-    <a href="/pages/experience.html" class="block text-stone-700 font-medium hover:text-amber-800">Experiences</a>
-    <a href="/pages/gallery.html" class="block text-stone-700 font-medium hover:text-amber-800">Gallery</a>
-    <a href="/pages/contact_us.html" class="block text-stone-700 font-medium hover:text-amber-800">Contact Us</a>
-  </div>
+    <div class="hidden peer-checked:block md:hidden bg-stone-50 border-t border-stone-200 p-6 space-y-4 text-center">
+        <a href="/index.html#booking" class="block text-stone-700 font-medium hover:text-amber-800">Booking</a>
+        <a href="/pages/experience.html" class="block text-stone-700 font-medium hover:text-amber-800">Experiences</a>
+        <a href="/pages/gallery.html" class="block text-stone-700 font-medium hover:text-amber-800">Gallery</a>
+        <a href="/pages/contact_us.html" class="block text-stone-700 font-medium hover:text-amber-800">Contact Us</a>
+    </div>
 </nav>
-
-<!-- JavaScript: Ensure this is at the bottom of your <body> -->
-<script>
-  (function() {
-    console.log("Script loaded successfully"); // You should see this immediately
-    
-    const menuButton = document.getElementById('mobile-menu-button');
-    const mobileMenu = document.getElementById('mobile-menu');
-
-    if (menuButton) {
-      menuButton.onclick = function(e) {
-        console.log("Button clicked!"); // Watch for this in Eruda
-        if (mobileMenu) {
-          mobileMenu.classList.toggle('hidden');
-        } else {
-          console.error("mobile-menu element not found!");
-        }
-      };
-    } else {
-      console.error("mobile-menu-button element not found!");
-    }
-  })();
-</script>
