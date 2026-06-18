@@ -1,9 +1,6 @@
 <style>
-    /* Desktop: Show tabs, Hide hamburger */
     .nav-tabs { display: flex; }
     .nav-mobile { display: none; }
-    
-    /* Mobile: Hide tabs, Show hamburger */
     @media (max-width: 768px) {
         .nav-tabs { display: none; }
         .nav-mobile { display: block; }
@@ -12,39 +9,32 @@
 
 <nav style="width: 100%; background: white; padding: 1rem; border-bottom: 1px solid #ddd; position: relative;">
     <div style="max-width: 1200px; margin: auto; display: flex; justify-content: space-between; align-items: center;">
-        
         <div style="font-weight: bold; font-size: 1.5rem;">Desert Bloom</div>
-
+        
         <div class="nav-tabs" style="gap: 20px;">
-            <a href="/" style="text-decoration: none; color: #333;">Home</a>
-            <a href="/pages/experience.html" style="text-decoration: none; color: #333;">Experiences</a>
-            <a href="/pages/gallery.html" style="text-decoration: none; color: #333;">Gallery</a>
-            <a href="/pages/contact_us.html" style="text-decoration: none; color: #333;">Contact</a>
+            <a href="/">Home</a>
+            <a href="/pages/experience.html">Experiences</a>
+            <a href="/pages/gallery.html">Gallery</a>
+            <a href="/pages/contact_us.html">Contact</a>
         </div>
 
-        <button class="nav-mobile" id="mobile-toggle" style="background: none; border: none; font-size: 1.5rem; cursor: pointer;">☰</button>
+        <button id="mobile-toggle" class="nav-mobile" style="background: none; border: none; font-size: 1.5rem; cursor: pointer;">☰</button>
     </div>
 
     <div id="mobile-menu" style="display: none; padding: 1rem; text-align: center; border-top: 1px solid #eee;">
-        <a href="/" style="display: block; padding: 0.5rem; text-decoration: none; color: #333;">Home</a>
-        <a href="/pages/experience.html" style="display: block; padding: 0.5rem; text-decoration: none; color: #333;">Experiences</a>
-        <a href="/pages/gallery.html" style="display: block; padding: 0.5rem; text-decoration: none; color: #333;">Gallery</a>
-        <a href="/pages/contact_us.html" style="display: block; padding: 0.5rem; text-decoration: none; color: #333;">Contact</a>
+        <a href="/" style="display: block; padding: 0.5rem;">Home</a>
+        <a href="/pages/experience.html" style="display: block; padding: 0.5rem;">Experiences</a>
+        <a href="/pages/gallery.html" style="display: block; padding: 0.5rem;">Gallery</a>
+        <a href="/pages/contact_us.html" style="display: block; padding: 0.5rem;">Contact</a>
     </div>
 </nav>
 
 <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        const toggleBtn = document.getElementById('mobile-toggle');
-        const menu = document.getElementById('mobile-menu');
-
-        toggleBtn.addEventListener('click', function(e) {
-            e.preventDefault();
-            if (menu.style.display === 'none' || menu.style.display === '') {
-                menu.style.display = 'block';
-            } else {
-                menu.style.display = 'none';
-            }
-        });
+    // This script listens to the whole document, so it doesn't matter when the nav loads
+    document.addEventListener('click', function(e) {
+        if (e.target && e.target.id === 'mobile-toggle') {
+            const menu = document.getElementById('mobile-menu');
+            menu.style.display = (menu.style.display === 'none' || menu.style.display === '') ? 'block' : 'none';
+        }
     });
 </script>
