@@ -1,33 +1,16 @@
-<!-- NAV START -->
-<nav style="width: 100%; background: #ffffff; padding: 15px 0; border-bottom: 1px solid #ddd; position: relative; z-index: 1000;">
-    <div style="max-width: 1000px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 20px;">
+<!-- TABBED NAVIGATION -->
+<nav style="width: 100%; background: #ffffff; padding: 15px 0; border-bottom: 1px solid #e5e7eb;">
+    <div style="max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 20px;">
         
         <!-- Logo -->
-        <div style="font-size: 20px; font-weight: bold;">Desert Bloom</div>
+        <div style="font-size: 24px; font-weight: bold; color: #78350f; font-family: serif;">Desert Bloom</div>
 
-        <!-- Hamburger Button -->
-        <button id="mobile-toggle" style="background: none; border: none; cursor: pointer; font-size: 24px;">
-            ☰
-        </button>
-    </div>
-
-    <!-- Mobile Menu -->
-    <div id="mobile-nav" style="display: none; background: #f9f9f9; padding: 20px; text-align: center; border-bottom: 1px solid #eee;">
-        <a href="/" style="display: block; padding: 10px; text-decoration: none; color: #333;">Home</a>
-        <a href="/pages/experience.html" style="display: block; padding: 10px; text-decoration: none; color: #333;">Experiences</a>
-        <a href="/pages/gallery.html" style="display: block; padding: 10px; text-decoration: none; color: #333;">Gallery</a>
+        <!-- Links (Tabs) -->
+        <div style="display: flex; gap: 20px;">
+            <a href="/index.html" style="text-decoration: none; color: #444; font-weight: 500;">Home</a>
+            <a href="/pages/experience.html" style="text-decoration: none; color: #444; font-weight: 500;">Experiences</a>
+            <a href="/pages/gallery.html" style="text-decoration: none; color: #444; font-weight: 500;">Gallery</a>
+            <a href="/pages/contact_us.html" style="text-decoration: none; color: #444; font-weight: 500;">Contact</a>
+        </div>
     </div>
 </nav>
-
-<!-- NAV SCRIPT -->
-<script>
-    document.getElementById('mobile-toggle').addEventListener('click', function() {
-        var menu = document.getElementById('mobile-nav');
-        if (menu.style.display === 'none' || menu.style.display === '') {
-            menu.style.display = 'block';
-        } else {
-            menu.style.display = 'none';
-        }
-    });
-</script>
-<!-- NAV END -->
