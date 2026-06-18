@@ -15,45 +15,36 @@
         
         <div style="font-weight: bold; font-size: 1.5rem;">Desert Bloom</div>
 
-        <!-- DESKTOP TABS -->
         <div class="nav-tabs" style="gap: 20px;">
-            <a href="/">Home</a>
-            <a href="/pages/experience.html">Experiences</a>
-            <a href="/pages/gallery.html">Gallery</a>
+            <a href="/" style="text-decoration: none; color: #333;">Home</a>
+            <a href="/pages/experience.html" style="text-decoration: none; color: #333;">Experiences</a>
+            <a href="/pages/gallery.html" style="text-decoration: none; color: #333;">Gallery</a>
+            <a href="/pages/contact_us.html" style="text-decoration: none; color: #333;">Contact</a>
         </div>
 
-        <!-- MOBILE HAMBURGER -->
         <button class="nav-mobile" id="mobile-toggle" style="background: none; border: none; font-size: 1.5rem; cursor: pointer;">☰</button>
     </div>
 
-    <!-- MOBILE MENU (Hidden by default) -->
     <div id="mobile-menu" style="display: none; padding: 1rem; text-align: center; border-top: 1px solid #eee;">
-        <a href="/" style="display: block; padding: 0.5rem;">Home</a>
-        <a href="/pages/experience.html" style="display: block; padding: 0.5rem;">Experiences</a>
-        <a href="/pages/gallery.html" style="display: block; padding: 0.5rem;">Gallery</a>
+        <a href="/" style="display: block; padding: 0.5rem; text-decoration: none; color: #333;">Home</a>
+        <a href="/pages/experience.html" style="display: block; padding: 0.5rem; text-decoration: none; color: #333;">Experiences</a>
+        <a href="/pages/gallery.html" style="display: block; padding: 0.5rem; text-decoration: none; color: #333;">Gallery</a>
+        <a href="/pages/contact_us.html" style="display: block; padding: 0.5rem; text-decoration: none; color: #333;">Contact</a>
     </div>
 </nav>
 
-
-alert("Script is running!");
 <script>
-    // Wait for the DOM to be fully loaded
     document.addEventListener("DOMContentLoaded", function() {
         const toggleBtn = document.getElementById('mobile-toggle');
         const menu = document.getElementById('mobile-menu');
 
-        if (toggleBtn && menu) {
-            // Use 'touchstart' for mobile, 'click' for desktop
-            toggleBtn.addEventListener('click', function(e) {
-                e.preventDefault(); // Stop any default browser behavior
-                if (menu.style.display === 'none' || menu.style.display === '') {
-                    menu.style.display = 'block';
-                } else {
-                    menu.style.display = 'none';
-                }
-            });
-        } else {
-            console.error("Navigation elements not found!");
-        }
+        toggleBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            if (menu.style.display === 'none' || menu.style.display === '') {
+                menu.style.display = 'block';
+            } else {
+                menu.style.display = 'none';
+            }
+        });
     });
 </script>
