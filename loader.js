@@ -1,6 +1,6 @@
 // loader.js
 // loader.js
-fetch('nav_bar.html')
+fetch('pages/nav_bar.html')
   .then(response => response.text())
   .then(data => {
     document.getElementById('nav-placeholder').innerHTML = data;
