@@ -31,11 +31,20 @@
 
 <!-- JavaScript: Ensure this is at the bottom of your <body> -->
 <script>
-  const menuButton = document.getElementById('mobile-menu-button');
-  const mobileMenu = document.getElementById('mobile-menu');
+  // Wait for the entire page to load before running the code
+  document.addEventListener('DOMContentLoaded', () => {
+    const menuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
 
-  menuButton.addEventListener('click', () => {
-    // Toggle the 'hidden' class to show/hide the menu
-    mobileMenu.classList.toggle('hidden');
+    // Add a check to see if the elements exist
+    if (menuButton && mobileMenu) {
+      menuButton.addEventListener('click', () => {
+        // Toggle the 'hidden' class
+        mobileMenu.classList.toggle('hidden');
+        console.log('Menu toggled!'); // Check your console to see if this appears
+      });
+    } else {
+      console.error('Menu elements not found! Check your HTML IDs.');
+    }
   });
 </script>
