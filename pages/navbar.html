@@ -34,9 +34,26 @@
     </div>
 </nav>
 
+
+alert("Script is running!");
 <script>
-    document.getElementById('mobile-toggle').addEventListener('click', function() {
-        var m = document.getElementById('mobile-menu');
-        m.style.display = (m.style.display === 'none' || m.style.display === '') ? 'block' : 'none';
+    // Wait for the DOM to be fully loaded
+    document.addEventListener("DOMContentLoaded", function() {
+        const toggleBtn = document.getElementById('mobile-toggle');
+        const menu = document.getElementById('mobile-menu');
+
+        if (toggleBtn && menu) {
+            // Use 'touchstart' for mobile, 'click' for desktop
+            toggleBtn.addEventListener('click', function(e) {
+                e.preventDefault(); // Stop any default browser behavior
+                if (menu.style.display === 'none' || menu.style.display === '') {
+                    menu.style.display = 'block';
+                } else {
+                    menu.style.display = 'none';
+                }
+            });
+        } else {
+            console.error("Navigation elements not found!");
+        }
     });
 </script>
