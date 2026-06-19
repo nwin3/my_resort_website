@@ -21,15 +21,18 @@
         <button id="mobile-toggle" class="nav-mobile" style="background: none; border: none; font-size: 1.5rem; cursor: pointer;">☰</button>
     </div>
 
-    <div id="mobile-menu" class="hidden" style="padding: 1rem; border-top: 1px solid #eee; width: 100%; display: flex; justify-content: center;">
+    <!-- MOBILE MENU -->
+<div id="mobile-menu" style="display: none !important; padding: 1rem; border-top: 1px solid #eee; justify-content: center; width: 100%;">
     
-    <div style="display: none !important; flex-direction: column; align-items: flex-start; gap: 12px; width: 200px;">
-        <a href="/" style="text-decoration: none; color: #333; font-weight: 500;">Home</a>
-        <a href="/pages/experience.html" style="text-decoration: none; color: #333; font-weight: 500;">Experiences</a>
-        <a href="/pages/gallery.html" style="text-decoration: none; color: #333; font-weight: 500;">Gallery</a>
-        <a href="/pages/contact_us.html" style="text-decoration: none; color: #333; font-weight: 500;">Contact</a>
+    <!-- The inner container -->
+    <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 15px; width: fit-content;">
+        <a href="/" style="text-decoration: none; color: #333; font-weight: 500; display: block;">Home</a>
+        <a href="/pages/experience.html" style="text-decoration: none; color: #333; font-weight: 500; display: block;">Experiences</a>
+        <a href="/pages/gallery.html" style="text-decoration: none; color: #333; font-weight: 500; display: block;">Gallery</a>
+        <a href="/pages/contact_us.html" style="text-decoration: none; color: #333; font-weight: 500; display: block;">Contact</a>
     </div>
-    </div>
+    
+</div>
 
 </nav>
 
