@@ -23,10 +23,11 @@
 
     <!-- MOBILE MENU -->
 <!-- MOBILE MENU -->
-<div id="mobile-menu" style="display: none !important; padding: 1rem; border-top: 1px solid #eee; flex-direction: column; align-items: center;">
+<!-- MOBILE MENU -->
+<div id="mobile-menu" style="display: none !important; padding: 1rem; border-top: 1px solid #eee; text-align: center;">
     
-    <!-- The links are now in a container that only takes the width it needs -->
-    <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 15px; width: fit-content;">
+    <!-- We use inline-flex here because it ignores 100% width rules -->
+    <div style="display: inline-flex; flex-direction: column; align-items: flex-start; gap: 15px; min-width: 150px;">
         <a href="/" style="text-decoration: none; color: #333; font-weight: 500;">Home</a>
         <a href="/pages/experience.html" style="text-decoration: none; color: #333; font-weight: 500;">Experiences</a>
         <a href="/pages/gallery.html" style="text-decoration: none; color: #333; font-weight: 500;">Gallery</a>
