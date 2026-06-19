@@ -1,21 +1,32 @@
 // loader.js
-// loader.js
-fetch('/pages/navbar.html')
-  .then(response => response.text())
-  .then(data => {
-    document.getElementById('nav-placeholder').innerHTML = data;
-    
-    const toggleBtn = document.getElementById('mobile-toggle');
-    const menu = document.getElementById('mobile-menu');
 
-    if (toggleBtn && menu) {
-        toggleBtn.addEventListener('click', function() {
-            // Check current display
-            if (menu.style.getPropertyValue('display') === 'none') {
-                menu.style.setProperty('display', 'block', 'important');
-            } else {
-                menu.style.setProperty('display', 'none', 'important');
+// loader.js
+document.addEventListener("DOMContentLoaded", () => {
+    // Load Navigation
+    fetch('/pages/navbar.html')
+        .then(response => response.text())
+        .then(data => {
+            const navPlaceholder = document.getElementById('nav-placeholder');
+            if (navPlaceholder) {
+                navPlaceholder.innerHTML = data;
+                // Add the toggle functionality logic here again for the mobile button
+                const toggleBtn = document.getElementById('mobile-toggle');
+                const menu = document.getElementById('mobile-menu');
+                if (toggleBtn) {
+                    toggleBtn.addEventListener('click', () => {
+                        menu.style.setProperty('display', menu.style.getPropertyValue('display') === 'none' ? 'flex' : 'none', 'important');
+                    });
+                }
             }
         });
-    }
-  });
+
+    // Load Footer
+    fetch('/pages/footer.html')
+        .then(response => response.text())
+        .then(data => {
+            const footerPlaceholder = document.getElementById('footer-placeholder');
+            if (footerPlaceholder) {
+                footerPlaceholder.innerHTML = data;
+            }
+        });
+});
