@@ -10,12 +10,9 @@ fetch('/pages/navbar.html')
 
     if (toggleBtn && menu) {
         toggleBtn.addEventListener('click', function() {
-            // Check current display
-            const isHidden = menu.style.getPropertyValue('display') === 'none' || menu.style.display === 'none !important';
-            
-            if (isHidden) {
-                // Show as flex so the internal elements center correctly
-                menu.style.setProperty('display', 'flex', 'important');
+            // If it's hidden, show it as 'block'
+            if (menu.style.display === 'none' || menu.style.display === 'none !important') {
+                menu.style.setProperty('display', 'block', 'important');
             } else {
                 menu.style.setProperty('display', 'none', 'important');
             }
