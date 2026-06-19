@@ -10,8 +10,8 @@ fetch('/pages/navbar.html')
 
     if (toggleBtn && menu) {
         toggleBtn.addEventListener('click', function() {
-            // If it's hidden, show it as 'block'
-            if (menu.style.display === 'none' || menu.style.display === 'none !important') {
+            // Check current display
+            if (menu.style.getPropertyValue('display') === 'none') {
                 menu.style.setProperty('display', 'block', 'important');
             } else {
                 menu.style.setProperty('display', 'none', 'important');
