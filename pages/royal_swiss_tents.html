@@ -15,8 +15,33 @@
     </header>
 
     <main class="max-w-4xl mx-auto px-6 pb-16">
-        <img src="../assets/royal_swiss_tents.png" alt="Royal Swiss Tents Interior"
-            class="w-full h-96 object-cover rounded-xl shadow-lg mb-8">
+                <!-- Slideshow Container -->
+<div class="relative w-full h-96 overflow-hidden rounded-xl shadow-lg mb-8">
+    <div id="slideshow" class="flex transition-transform duration-500 ease-in-out h-full">
+        <img src="../assets/royal_swiss_tents.png" class="w-full h-full object-cover flex-shrink-0" alt="Slide 1">
+        <img src="../assets/watermark1.png" class="w-full h-full object-cover flex-shrink-0" alt="Slide 2">
+        <img src="../assets/watermark.png" class="w-full h-full object-cover flex-shrink-0" alt="Slide 3">
+    </div>
+    
+    <!-- Optional: Add simple navigation arrows -->
+    <button onclick="changeSlide(-1)" class="absolute left-2 top-1/2 bg-black/30 text-white p-2 rounded-full">❮</button>
+    <button onclick="changeSlide(1)" class="absolute right-2 top-1/2 bg-black/30 text-white p-2 rounded-full">❯</button>
+</div>
+
+<!-- Slideshow Logic -->
+<script>
+    let currentSlide = 0;
+    const slides = document.getElementById('slideshow');
+    const totalSlides = slides.children.length;
+
+    function changeSlide(direction) {
+        currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
+        slides.style.transform = `translateX(-${currentSlide * 100}%)`;
+    }
+
+    // Optional: Auto-play every 5 seconds
+    setInterval(() => changeSlide(1), 5000);
+</script>
 
         <div class="grid md:grid-cols-2 gap-12">
             <div>
