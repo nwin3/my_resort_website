@@ -22,16 +22,16 @@
         <button id="mobile-toggle" class="md:hidden text-2xl text-stone-800">☰</button>
     </div>
 
-    <!-- Mobile Menu -->
-    <div id="mobile-menu" class="hidden md:hidden bg-stone-50 border-t border-stone-200 p-6 flex-col gap-4 text-right">
-        <a href="/" class="block text-stone-700 font-medium">Home</a>
-        <a href="/pages/destination.html" class="block text-stone-700 font-medium">Destinations</a>
-        <a href="/pages/experience.html" class="block text-stone-700 font-medium">Experiences</a>
-        <a href="/pages/packages.html" class="block text-stone-700 font-medium">Packages</a>
-        <a href="/pages/gallery.html" class="block text-stone-700 font-medium">Gallery</a>
-        <a href="/pages/contact_us.html" class="block text-stone-700 font-medium">Contact</a>
-        <!-- <a href="#booking-section" class="block bg-amber-800 text-white py-2 rounded-lg text-center font-bold mt-2">Book Now</a>-->
-    </div>
+    <!-- Mobile Menu (Now absolute-positioned to the right) -->
+<div id="mobile-menu" class="hidden md:hidden absolute top-[72px] right-6 bg-white border border-stone-200 rounded-xl shadow-xl p-4 flex-col gap-3 text-right z-50 w-48">
+    <a href="/" class="block text-stone-700 font-medium py-1">Home</a>
+    <a href="/pages/destination.html" class="block text-stone-700 font-medium py-1">Destinations</a>
+    <a href="/pages/experience.html" class="block text-stone-700 font-medium py-1">Experiences</a>
+    <a href="/pages/packages.html" class="block text-stone-700 font-medium py-1">Packages</a>
+    <a href="/pages/gallery.html" class="block text-stone-700 font-medium py-1">Gallery</a>
+    <a href="/pages/contact_us.html" class="block text-stone-700 font-medium py-1">Contact</a>
+    <a href="#booking-section" class="block bg-amber-800 text-white py-2 rounded-lg text-center font-bold mt-2">Book Now</a>
+</div>
 </nav>
 
 <script>
