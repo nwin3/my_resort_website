@@ -1,52 +1,46 @@
-<style>
-    .nav-tabs { display: flex; }
-    .nav-mobile { display: none; }
-    @media (max-width: 768px) {
-        .nav-tabs { display: none; }
-        .nav-mobile { display: block; }
-    }
-</style>
-
-<nav style="width: 100%; background: white; padding: 1rem; border-bottom: 1px solid #ddd; position: relative;">
-    <div style="max-width: 1200px; margin: auto; display: flex; justify-content: space-between; align-items: center;">
-        <div style="font-weight: bold; font-size: 1.5rem;">Desert Bloom  (Starting 01/10/2026)</div>
+<nav class="sticky top-0 w-full z-50 bg-white border-b border-stone-200 shadow-sm">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+        <!-- Logo -->
+        <div class="font-serif text-2xl text-amber-900 font-bold">Desert Bloom</div>
         
-        <div class="nav-tabs" style="gap: 20px;">
-            <a href="/">Home</a>
-            <a href="/pages/destination.html">Destinations</a>
-            <a href="/pages/experience.html">Experiences</a>
-            <a href="/pages/packages.html">Packages</a>
-            <a href="/pages/gallery.html">Gallery</a>
-            <a href="/pages/contact_us.html">Contact</a>
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex items-center gap-6 text-stone-700 font-medium">
+            <a href="/" class="hover:text-amber-900 transition">Home</a>
+            <a href="/pages/destination.html" class="hover:text-amber-900 transition">Destinations</a>
+            <a href="/pages/experience.html" class="hover:text-amber-900 transition">Experiences</a>
+            <a href="/pages/packages.html" class="hover:text-amber-900 transition">Packages</a>
+            <a href="/pages/gallery.html" class="hover:text-amber-900 transition">Gallery</a>
+            <a href="/pages/contact_us.html" class="hover:text-amber-900 transition">Contact</a>
+            
+            <!-- Book Now CTA -->
+            <a href="#booking-section" class="bg-amber-800 text-white px-5 py-2 rounded-lg hover:bg-amber-900 transition shadow-md">
+                Book Now
+            </a>
         </div>
 
-        <button id="mobile-toggle" class="nav-mobile" style="background: none; border: none; font-size: 1.5rem; cursor: pointer;">☰</button>
+        <!-- Mobile Toggle Button -->
+        <button id="mobile-toggle" class="md:hidden text-2xl text-stone-800">☰</button>
     </div>
 
-    <!-- MOBILE MENU -->
-<!-- MOBILE MENU -->
-<!-- MOBILE MENU -->
-<div id="mobile-menu" style="display: none !important; position: absolute; top: 60px; right: 10px; background: white; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); padding: 10px; z-index: 1000; text-align: right;">
-    
-    <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 10px;">
-        <a href="/" style="text-decoration: none; color: #333; font-weight: 500; display: block; padding: 5px;">Home</a>   
-        <a href="/pages/destination.html" style="text-decoration: none; color: #333; font-weight: 500; display: block; padding: 5px;">Destinations</a>
-        <a href="/pages/experience.html" style="text-decoration: none; color: #333; font-weight: 500; display: block; padding: 5px;">Experiences</a>
-        <a href="/pages/packages.html" style="text-decoration: none; color: #333; font-weight: 500; display: block; padding: 5px;">Packages</a>
-        <a href="/pages/gallery.html" style="text-decoration: none; color: #333; font-weight: 500; display: block; padding: 5px;">Gallery</a>
-        <a href="/pages/contact_us.html" style="text-decoration: none; color: #333; font-weight: 500; display: block; padding: 5px;">Contact</a>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-stone-50 border-t border-stone-200 p-6 flex-col gap-4 text-right">
+        <a href="/" class="block text-stone-700 font-medium">Home</a>
+        <a href="/pages/destination.html" class="block text-stone-700 font-medium">Destinations</a>
+        <a href="/pages/experience.html" class="block text-stone-700 font-medium">Experiences</a>
+        <a href="/pages/packages.html" class="block text-stone-700 font-medium">Packages</a>
+        <a href="/pages/gallery.html" class="block text-stone-700 font-medium">Gallery</a>
+        <a href="/pages/contact_us.html" class="block text-stone-700 font-medium">Contact</a>
+        <a href="#booking-section" class="block bg-amber-800 text-white py-2 rounded-lg text-center font-bold mt-2">Book Now</a>
     </div>
-    
-</div>
-
 </nav>
 
 <script>
-    // This script listens to the whole document, so it doesn't matter when the nav loads
-    document.addEventListener('click', function(e) {
-        if (e.target && e.target.id === 'mobile-toggle') {
-            const menu = document.getElementById('mobile-menu');
-            menu.style.display = (menu.style.display === 'none' || menu.style.display === '') ? 'block' : 'none';
-        }
+    const toggle = document.getElementById('mobile-toggle');
+    const menu = document.getElementById('mobile-menu');
+
+    toggle.addEventListener('click', () => {
+        // Toggle the 'hidden' class to show/hide the menu
+        menu.classList.toggle('hidden');
+        menu.classList.toggle('flex');
     });
 </script>
