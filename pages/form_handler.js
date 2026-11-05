@@ -11,7 +11,7 @@ form.addEventListener('submit', function (e) {
 
     const formData = new URLSearchParams(new FormData(form));
 
-    fetch('https://script.google.com/macros/s/AKfycbzlKMC4-1bUSZ9J6ttXvEAPmfeNFjeTiUrAiY9GDFc00a7OqDxh6-pm6jNdWDnRvVtV/exec', {
+    fetch('https://script.google.com/macros/s/AKfycby8drmUbAfzmv0cS4p0eKTStxAC_1pHvW126gXMB93cfO6zzOmeShokpP4Wjy2JNw_Z/exec', {
         method: 'POST',
         body: formData,
         redirect: 'follow'
