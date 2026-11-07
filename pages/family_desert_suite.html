@@ -12,39 +12,39 @@
 
     <div id="nav-placeholder"></div>
     <script src="../loader.js"></script>
-    <header class="py-10 text-center">
+    
+    <!-- Top padding adjusted to clear fixed navbar -->
+    <header class="pt-28 md:pt-36 pb-8 text-center">
         <h1 class="text-4xl font-serif text-amber-900">Family Desert Suite</h1>
     </header>
 
     <main class="max-w-4xl mx-auto px-6 pb-16">
-       
+        
         <!-- Slideshow Container -->
-<div class="relative w-full h-96 overflow-hidden rounded-xl shadow-lg mb-8">
-    <div id="slideshow" class="flex transition-transform duration-500 ease-in-out h-full">
-        <img src="../assets/family_desert_suite.png" class="w-full h-full object-cover flex-shrink-0" alt="Slide 1">
-        <img src="../assets/watermark1.png" class="w-full h-full object-cover flex-shrink-0" alt="Slide 2">
-        <img src="../assets/watermark.png" class="w-full h-full object-cover flex-shrink-0" alt="Slide 3">
-    </div>
-    
-    <!-- Optional: Add simple navigation arrows -->
-    <button onclick="changeSlide(-1)" class="absolute left-2 top-1/2 bg-black/30 text-white p-2 rounded-full">❮</button>
-    <button onclick="changeSlide(1)" class="absolute right-2 top-1/2 bg-black/30 text-white p-2 rounded-full">❯</button>
-</div>
+        <div class="relative w-full h-96 overflow-hidden rounded-xl shadow-lg mb-8">
+            <div id="slideshow" class="flex transition-transform duration-500 ease-in-out h-full">
+                <img src="../assets/family_desert_suite.png" class="w-full h-full object-cover flex-shrink-0" alt="Slide 1">
+                <img src="../assets/watermark1.png" class="w-full h-full object-cover flex-shrink-0" alt="Slide 2">
+                <img src="../assets/watermark.png" class="w-full h-full object-cover flex-shrink-0" alt="Slide 3">
+            </div>
+            
+            <button onclick="changeSlide(-1)" class="absolute left-2 top-1/2 bg-black/30 text-white p-2 rounded-full">❮</button>
+            <button onclick="changeSlide(1)" class="absolute right-2 top-1/2 bg-black/30 text-white p-2 rounded-full">❯</button>
+        </div>
 
-<!-- Slideshow Logic -->
-<script>
-    let currentSlide = 0;
-    const slides = document.getElementById('slideshow');
-    const totalSlides = slides.children.length;
+        <!-- Slideshow Logic -->
+        <script>
+            let currentSlide = 0;
+            const slides = document.getElementById('slideshow');
+            const totalSlides = slides.children.length;
 
-    function changeSlide(direction) {
-        currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
-        slides.style.transform = `translateX(-${currentSlide * 100}%)`;
-    }
+            function changeSlide(direction) {
+                currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
+                slides.style.transform = `translateX(-${currentSlide * 100}%)`;
+            }
 
-    // Optional: Auto-play every 5 seconds
-    setInterval(() => changeSlide(1), 5000);
-</script>
+            setInterval(() => changeSlide(1), 5000);
+        </script>
 
         <div class="grid md:grid-cols-2 gap-12">
             <div>
@@ -53,13 +53,40 @@
                     Designed with families in mind, our Family Desert Suite offers an expansive living space
                     that combines traditional Rajasthani elegance with modern convenience.
                 </p>
-                <ul class="list-disc list-inside text-stone-700 space-y-2">
-                    <li>Expansive Suite Layout</li>
-                    <li>King Bed</li>
-                </ul>
+
+                <!-- Room Features -->
+                <div class="mb-6">
+                    <h3 class="text-lg font-semibold text-amber-950 mb-2">Room Features</h3>
+                    <ul class="list-disc list-inside text-stone-700 space-y-1">
+                        <li>Expansive Suite Layout</li>
+                        <li>Plush King Bed</li>
+                    </ul>
+                </div>
+
+                <!-- Complimentary Amenities (Standard Hospitality Naming) -->
+                <div class="pt-4 border-t border-stone-200">
+                    <h3 class="text-lg font-semibold text-amber-950 mb-3">Complimentary Amenities & Toiletries</h3>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-stone-700 text-sm">
+                        <div class="flex items-center gap-2">
+                            <span class="text-amber-800">✔</span> Dental Care Kit
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="text-amber-800">✔</span> Shaving & Grooming Kit
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="text-amber-800">✔</span> Premium Bath Essentials
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="text-amber-800">✔</span> Plush Bath & Hand Towels
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="text-amber-800">✔</span> In-Room Bath Slippers
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <div class="bg-white p-8 rounded-xl shadow-sm border border-stone-100">
+            <div class="bg-white p-8 rounded-xl shadow-sm border border-stone-100 h-fit">
                 <h3 class="text-xl font-bold mb-4">Check Availability</h3>
                 <form id="inquiryForm" class="space-y-4">
                     <input type="hidden" name="roomType" value="Family Desert Suite">
@@ -75,7 +102,7 @@
                     
                     <input type="date" name="date" id="date" class="w-full p-2 border rounded" required>
                     
-                    <button type="submit" class="w-full bg-amber-900 text-white py-2 rounded">Send Inquiry</button>
+                    <button type="submit" class="w-full bg-amber-900 text-white py-2 rounded font-medium hover:bg-amber-800 transition-colors">Send Inquiry</button>
                 </form>
 
                 <script src="country.js"></script>
@@ -84,6 +111,8 @@
             </div>
         </div>
     </main>
+
+    <div id="footer-placeholder"></div>
 </body>
 
 </html>
