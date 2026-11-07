@@ -10,14 +10,15 @@
 
     <div id="nav-placeholder"></div>
 
-    <main class="max-w-6xl mx-auto py-16 px-6">
+    <!-- Increased top padding (pt-28 on mobile, pt-36 on desktop) to clear fixed/sticky navbar -->
+    <main class="max-w-6xl mx-auto pt-28 md:pt-36 pb-16 px-6">
         <h1 class="text-4xl md:text-5xl font-serif text-amber-900 text-center mb-6">Explore Jaisalmer</h1>
         <p class="text-center text-stone-600 max-w-2xl mx-auto mb-16">Discover the golden magic of Rajasthan. From ancient forts to the endless dunes of the Thar, here are the must-visit places near our resort.</p>
 
         <!-- Destination Grid -->
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             
-            <!-- Card Template -->
+            <!-- Card 1: Jaisalmer Fort -->
             <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
                 <img src="../assets/fort.jpeg?q=80&w=600" alt="Jaisalmer Fort" class="w-full h-56 object-cover">
                 <div class="p-6">
@@ -26,7 +27,7 @@
                 </div>
             </div>
 
-            <!-- Repeat this block for other 9 places, changing the image and text -->
+            <!-- Card 2: Sam Sand Dunes -->
             <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
                 <img src="../assets/dunes.jpeg?q=80&w=600" alt="Sam Sand Dunes" class="w-full h-56 object-cover">
                 <div class="p-6">
@@ -35,8 +36,7 @@
                 </div>
             </div>
 
-            
-            <!-- Card: Babliyanwala (Indo-Pak Border) -->
+            <!-- Card 3: Babliyanwala (Indo-Pak Border) -->
             <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
                 <img src="../assets/border.jpeg?q=80&w=600" alt="Babliyanwala Indo-Pak Border" class="w-full h-56 object-cover">
                 <div class="p-6">
@@ -45,7 +45,7 @@
                 </div>
             </div>
 
-             <!-- Card: Longewala War Memorial -->
+            <!-- Card 4: Longewala War Memorial -->
             <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
                 <img src="../assets/longwala.jpeg?q=80&w=600" alt="Longewala War Memorial" class="w-full h-56 object-cover">
                 <div class="p-6">
@@ -54,7 +54,7 @@
                 </div>
             </div>
 
-            <!-- Card: Tanot Mata Temple -->
+            <!-- Card 5: Tanot Mata Temple -->
             <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
                 <img src="../assets/tanot_mata.jpeg?q=80&w=600" alt="Tanot Mata Temple" class="w-full h-56 object-cover">
                 <div class="p-6">
@@ -63,7 +63,7 @@
                 </div>
             </div>
 
-            <!-- Add the remaining 8 places following this same structure -->
+            <!-- Card 6: Gadisar Lake -->
             <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
                 <img src="../assets/gadisar.jpeg?q=80&w=600" alt="Gadisar Lake" class="w-full h-56 object-cover">
                 <div class="p-6">
@@ -72,16 +72,16 @@
                 </div>
             </div>
 
-            <!-- Place 4: Patwon Ki Haveli -->
+            <!-- Card 7: Patwon Ki Haveli -->
             <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-                <img src="../assets/patwa_haveli.jpeg"?q=80&w=600" alt="Patwon Ki Haveli" class="w-full h-56 object-cover">
+                <img src="../assets/patwa_haveli.jpeg?q=80&w=600" alt="Patwon Ki Haveli" class="w-full h-56 object-cover">
                 <div class="p-6">
                     <h3 class="text-2xl font-serif text-amber-900 mb-3">Patwon Ki Haveli</h3>
                     <p class="text-stone-600 text-sm leading-relaxed">A stunning cluster of five intricate havelis built by wealthy traders. It is the largest and most ornate mansion in Jaisalmer, famous for its grand mirror work and detailed stone carvings.</p>
                 </div>
             </div>
 
-            <!-- Place 5: Bada Bagh -->
+            <!-- Card 8: Bada Bagh -->
             <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
                 <img src="../assets/bada_bagh.jpeg?q=80&w=600" alt="Bada Bagh" class="w-full h-56 object-cover">
                 <div class="p-6">
@@ -90,7 +90,7 @@
                 </div>
             </div>
 
-            <!-- Place 6: Kuldhara Village -->
+            <!-- Card 9: Kuldhara Village -->
             <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
                 <img src="../assets/kuldhara.jpeg?q=80&w=600" alt="Kuldhara Village" class="w-full h-56 object-cover">
                 <div class="p-6">
@@ -99,7 +99,7 @@
                 </div>
             </div>
 
-            <!-- Place 8: Jain Temples -->
+            <!-- Card 10: Jain Temples -->
             <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
                 <img src="../assets/jain_temple.jpeg?q=80&w=600" alt="Jain Temples" class="w-full h-56 object-cover">
                 <div class="p-6">
@@ -108,7 +108,7 @@
                 </div>
             </div>
 
-            <!-- Place 9: Nathmal Ji Ki Haveli -->
+            <!-- Card 11: Nathmal Ji Ki Haveli -->
             <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
                 <img src="../assets/nathamal.jpeg?q=80&w=600" alt="Nathmal Ji Ki Haveli" class="w-full h-56 object-cover">
                 <div class="p-6">
@@ -117,7 +117,7 @@
                 </div>
             </div>
 
-            <!-- Place 10: Khaba Fort -->
+            <!-- Card 12: Khaba Fort -->
             <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
                 <img src="../assets/khaba_fort.jpeg?q=80&w=600" alt="Khaba Fort" class="w-full h-56 object-cover">
                 <div class="p-6">
@@ -126,7 +126,7 @@
                 </div>
             </div>
 
-            <!-- Card: Akal Wood Fossil Park -->
+            <!-- Card 13: Akal Wood Fossil Park -->
             <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
                 <img src="../assets/wood_fossil_park.jpeg?q=80&w=600" alt="Akal Wood Fossil Park" class="w-full h-56 object-cover">
                 <div class="p-6">
@@ -135,7 +135,7 @@
                 </div>
             </div>
 
-            <!-- Card: Kuldhara Cactus Park -->
+            <!-- Card 14: Kuldhara Cactus Park -->
             <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
                 <img src="../assets/cactus_park.jpeg?q=80&w=600" alt="Cactus Botanical Park" class="w-full h-56 object-cover">
                 <div class="p-6">
