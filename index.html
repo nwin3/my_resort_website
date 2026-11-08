@@ -64,21 +64,19 @@
 
         <!-- Round-Robin Image Carousel Component -->
         <div id="hero-slider" class="relative w-full h-full">
-            <!-- Slides (Add/replace image paths as needed) -->
-            <img src="/assets/bedroom.png" alt="Luxury Tents Interior" class="hero-slide absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out opacity-0">
+            <!-- First slide has opacity-100 so it renders immediately before JS execution -->
+            <img src="/assets/bedroom.png" alt="Luxury Tents Interior" class="hero-slide absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out opacity-100">
             <img src="/assets/room_out.jpg" alt="Sam Sand Dunes" class="hero-slide absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out opacity-0">
             <img src="/assets/seating.png" alt="Sam Sand Dunes" class="hero-slide absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out opacity-0">
-            
             <img src="/assets/bonfire.jpeg" alt="Thar Desert Hospitality" class="hero-slide absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out opacity-0">
             <img src="/assets/bathroom.png" alt="Sam Sand Dunes" class="hero-slide absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out opacity-0">
             <img src="/assets/dunes.jpeg" alt="Sam Sand Dunes" class="hero-slide absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out opacity-0">
-            
         </div>
 
         <!-- Contrast overlay for readability and styling -->
         <div class="absolute inset-0 bg-black/30 z-10 pointer-events-none"></div>
 
-        <!-- Optional: Manual Navigation Arrows -->
+        <!-- Manual Navigation Arrows -->
         <button onclick="prevHeroSlide()" class="absolute left-4 top-1/2 -translate-y-1/2 z-20 text-white/70 hover:text-white bg-black/30 hover:bg-black/50 w-10 h-10 rounded-full flex items-center justify-center transition">
             <i class="fa-solid fa-chevron-left"></i>
         </button>
@@ -143,6 +141,9 @@
             clearInterval(slideTimer);
             slideTimer = setInterval(nextHeroSlide, 4500); // Transitions every 4.5 seconds
         }
+
+        // Display first slide immediately on page load
+        showSlide(0);
 
         // Initialize auto round-robin loop
         resetSlideTimer();
