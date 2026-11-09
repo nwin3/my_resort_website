@@ -1,0 +1,320 @@
+<!-- MEAL PLAN & SEASONAL RATES SECTION -->
+<section id="pricing-matrix" class="py-16 px-4 md:px-6 bg-stone-100">
+    <div class="max-w-6xl mx-auto">
+        
+        <!-- Header -->
+        <div class="text-center mb-10">
+            <span class="text-amber-800 text-xs md:text-sm font-semibold tracking-widest uppercase bg-amber-100 px-3 py-1 rounded-full">
+                Transparent Tariff & Packages
+            </span>
+            <h2 class="text-3xl md:text-4xl font-serif text-stone-900 mt-3 mb-3">
+                Packages & Seasonal Rates
+            </h2>
+            <p class="text-stone-600 max-w-2xl mx-auto text-sm md:text-base">
+                Choose your preferred meal package to view rates across dates and seasons for our luxury <strong>Royal Swiss Tents</strong>.
+            </p>
+        </div>
+
+        <!-- 1. MEAL PLAN TOGGLE SWITCHER -->
+        <div class="flex justify-center mb-10">
+            <div class="inline-flex p-1.5 bg-stone-200/80 rounded-2xl shadow-inner max-w-full overflow-x-auto gap-1">
+                <button type="button" onclick="selectMealPlan('cp')" id="tab-cp"
+                    class="meal-tab px-4 md:px-6 py-2.5 rounded-xl text-xs md:text-sm font-semibold transition-all duration-200 text-stone-700 hover:text-stone-900 cursor-pointer">
+                    CP (Room + Breakfast)
+                </button>
+                <button type="button" onclick="selectMealPlan('map')" id="tab-map"
+                    class="meal-tab active-tab px-4 md:px-6 py-2.5 rounded-xl text-xs md:text-sm font-semibold transition-all duration-200 bg-amber-900 text-white shadow-md cursor-pointer">
+                    MAP (Breakfast + Dinner) ⭐
+                </button>
+                <button type="button" onclick="selectMealPlan('ap')" id="tab-ap"
+                    class="meal-tab px-4 md:px-6 py-2.5 rounded-xl text-xs md:text-sm font-semibold transition-all duration-200 text-stone-700 hover:text-stone-900 cursor-pointer">
+                    AP (All 3 Meals)
+                </button>
+            </div>
+        </div>
+
+        <!-- 2. RATES BY DATES / SEASONS CARDS -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 items-stretch mb-12">
+
+            <!-- Card 1: Standard Weekdays -->
+            <div class="bg-white rounded-2xl shadow-md border border-stone-200 overflow-hidden flex flex-col justify-between hover:shadow-xl transition-all">
+                <div class="p-6 md:p-8">
+                    <span class="text-xs font-bold uppercase tracking-wider text-stone-600 bg-stone-100 px-2.5 py-1 rounded-md">
+                        Sun – Thu Stays
+                    </span>
+                    <h3 class="text-xl font-bold font-serif text-amber-900 mt-3 mb-1">Standard Season</h3>
+                    <p class="text-xs text-stone-500 mb-6">Regular dates (Excluding Festivals & Long Weekends)</p>
+                    
+                    <div class="mb-6 pb-6 border-b border-stone-100">
+                        <div class="flex items-baseline gap-1">
+                            <span class="text-sm font-medium text-stone-500">₹</span>
+                            <span id="price-regular" class="text-4xl font-extrabold text-stone-900 transition-all">4,500</span>
+                            <span class="text-xs text-stone-500">/ night</span>
+                        </div>
+                        <p id="plan-name-regular" class="text-xs text-amber-800 font-medium mt-1">Double Occupancy (MAP Plan)</p>
+                    </div>
+
+                    <!-- Breakdown Table -->
+                    <div class="space-y-2.5 text-xs md:text-sm text-stone-600">
+                        <div class="flex justify-between py-1 border-b border-stone-50">
+                            <span>Double Occupancy:</span>
+                            <strong id="sub-regular-double" class="text-stone-900">₹4,500</strong>
+                        </div>
+                        <div class="flex justify-between py-1 border-b border-stone-50">
+                            <span>Single Occupancy:</span>
+                            <strong id="sub-regular-single" class="text-stone-900">₹4,000</strong>
+                        </div>
+                        <div class="flex justify-between py-1 border-b border-stone-50">
+                            <span>Extra Adult (with Bed):</span>
+                            <strong id="sub-regular-adult" class="text-stone-900">₹1,800</strong>
+                        </div>
+                        <div class="flex justify-between py-1">
+                            <span>Child (6–11 yrs):</span>
+                            <strong id="sub-regular-child" class="text-stone-900">₹1,000</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="p-6 bg-stone-50/70 border-t border-stone-100">
+                    <a id="btn-regular-wa" href="#" target="_blank" rel="noopener noreferrer"
+                       class="w-full inline-flex items-center justify-center gap-2 bg-stone-800 hover:bg-stone-900 text-white font-medium py-2.5 px-4 rounded-xl transition text-sm">
+                        <i class="fa-brands fa-whatsapp text-emerald-400"></i>
+                        Inquire Standard Dates
+                    </a>
+                </div>
+            </div>
+
+            <!-- Card 2: Weekend & Winter Peak (Highlighted) -->
+            <div class="bg-white rounded-2xl shadow-xl border-2 border-amber-600 overflow-hidden flex flex-col justify-between relative transform md:-translate-y-2 hover:shadow-2xl transition-all">
+                <div class="bg-amber-600 text-white text-center py-1.5 text-xs font-bold uppercase tracking-widest">
+                    Most Popular Choice
+                </div>
+
+                <div class="p-6 md:p-8">
+                    <span class="text-xs font-bold uppercase tracking-wider text-amber-800 bg-amber-100 px-2.5 py-1 rounded-md">
+                        Fri – Sat & Winter Dates
+                    </span>
+                    <h3 class="text-xl font-bold font-serif text-amber-900 mt-3 mb-1">Weekend Peak</h3>
+                    <p class="text-xs text-stone-500 mb-6">Weekend getaways & tourist high season dates</p>
+                    
+                    <div class="mb-6 pb-6 border-b border-stone-100">
+                        <div class="flex items-baseline gap-1">
+                            <span class="text-sm font-medium text-stone-500">₹</span>
+                            <span id="price-weekend" class="text-4xl font-extrabold text-stone-900 transition-all">5,500</span>
+                            <span class="text-xs text-stone-500">/ night</span>
+                        </div>
+                        <p id="plan-name-weekend" class="text-xs text-amber-800 font-medium mt-1">Double Occupancy (MAP Plan)</p>
+                    </div>
+
+                    <!-- Breakdown Table -->
+                    <div class="space-y-2.5 text-xs md:text-sm text-stone-600">
+                        <div class="flex justify-between py-1 border-b border-stone-50">
+                            <span>Double Occupancy:</span>
+                            <strong id="sub-weekend-double" class="text-stone-900">₹5,500</strong>
+                        </div>
+                        <div class="flex justify-between py-1 border-b border-stone-50">
+                            <span>Single Occupancy:</span>
+                            <strong id="sub-weekend-single" class="text-stone-900">₹5,000</strong>
+                        </div>
+                        <div class="flex justify-between py-1 border-b border-stone-50">
+                            <span>Extra Adult (with Bed):</span>
+                            <strong id="sub-weekend-adult" class="text-stone-900">₹2,200</strong>
+                        </div>
+                        <div class="flex justify-between py-1">
+                            <span>Child (6–11 yrs):</span>
+                            <strong id="sub-weekend-child" class="text-stone-900">₹1,200</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="p-6 bg-amber-50/50 border-t border-amber-100">
+                    <a id="btn-weekend-wa" href="#" target="_blank" rel="noopener noreferrer"
+                       class="w-full inline-flex items-center justify-center gap-2 bg-amber-800 hover:bg-amber-900 text-white font-medium py-2.5 px-4 rounded-xl transition text-sm shadow-md">
+                        <i class="fa-brands fa-whatsapp text-emerald-400"></i>
+                        Inquire Weekend Dates
+                    </a>
+                </div>
+            </div>
+
+            <!-- Card 3: Festival & New Year Gala -->
+            <div class="bg-white rounded-2xl shadow-md border border-stone-200 overflow-hidden flex flex-col justify-between hover:shadow-xl transition-all">
+                <div class="p-6 md:p-8">
+                    <span class="text-xs font-bold uppercase tracking-wider text-purple-700 bg-purple-50 px-2.5 py-1 rounded-md">
+                        Festivals & Celebrations
+                    </span>
+                    <h3 class="text-xl font-bold font-serif text-amber-900 mt-3 mb-1">Prime & Gala Dates</h3>
+                    <p class="text-xs text-stone-500 mb-6">Diwali, Christmas & New Year (Dec 24–Jan 2), Desert Fest</p>
+                    
+                    <div class="mb-6 pb-6 border-b border-stone-100">
+                        <div class="flex items-baseline gap-1">
+                            <span class="text-sm font-medium text-stone-500">₹</span>
+                            <span id="price-gala" class="text-4xl font-extrabold text-stone-900 transition-all">8,500</span>
+                            <span class="text-xs text-stone-500">/ night</span>
+                        </div>
+                        <p id="plan-name-gala" class="text-xs text-amber-800 font-medium mt-1">Includes Gala Dinner & DJ</p>
+                    </div>
+
+                    <!-- Breakdown Table -->
+                    <div class="space-y-2.5 text-xs md:text-sm text-stone-600">
+                        <div class="flex justify-between py-1 border-b border-stone-50">
+                            <span>Double Occupancy:</span>
+                            <strong id="sub-gala-double" class="text-stone-900">₹8,500</strong>
+                        </div>
+                        <div class="flex justify-between py-1 border-b border-stone-50">
+                            <span>Extra Adult:</span>
+                            <strong id="sub-gala-adult" class="text-stone-900">₹3,500</strong>
+                        </div>
+                        <div class="flex justify-between py-1 border-b border-stone-50">
+                            <span>Child (6–11 yrs):</span>
+                            <strong id="sub-gala-child" class="text-stone-900">₹2,000</strong>
+                        </div>
+                        <div class="flex justify-between py-1">
+                            <span>Special Feature:</span>
+                            <strong class="text-purple-700">Live DJ & Gala Buffet</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="p-6 bg-stone-50/70 border-t border-stone-100">
+                    <a id="btn-gala-wa" href="#" target="_blank" rel="noopener noreferrer"
+                       class="w-full inline-flex items-center justify-center gap-2 bg-stone-800 hover:bg-stone-900 text-white font-medium py-2.5 px-4 rounded-xl transition text-sm">
+                        <i class="fa-brands fa-whatsapp text-emerald-400"></i>
+                        Inquire Gala Dates
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- 3. INCLUSIONS ACCORDION / BOX -->
+        <div class="bg-white rounded-2xl p-6 md:p-8 border border-stone-200 shadow-sm">
+            <h4 class="text-lg font-serif font-bold text-amber-900 mb-4 flex items-center gap-2">
+                <i class="fa-solid fa-circle-check text-emerald-600"></i>
+                Every Package In Desert Bloom Includes:
+            </h4>
+            
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 text-xs md:text-sm text-stone-700">
+                <div class="flex items-center gap-2">
+                    <span class="text-amber-800">✓</span> Traditional Dhol &amp; Tikka Welcome
+                </div>
+                <div class="flex items-center gap-2">
+                    <span class="text-amber-800">✓</span> Sunset Camel Safari (1 Camel / 2 Pax)
+                </div>
+                <div class="flex items-center gap-2">
+                    <span class="text-amber-800">✓</span> Evening Tea / Coffee &amp; Snacks
+                </div>
+                <div class="flex items-center gap-2">
+                    <span class="text-amber-800">✓</span> Kalbeliya Dance &amp; Live Folk Music
+                </div>
+                <div class="flex items-center gap-2">
+                    <span class="text-amber-800">✓</span> Campfire Evening Under the Stars
+                </div>
+                <div class="flex items-center gap-2">
+                    <span class="text-amber-800" id="inc-dining-tag">✓ Buffet Dinner &amp; Breakfast</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <span class="text-amber-800">✓</span> Attached Western Toilet &amp; Geyser
+                </div>
+                <div class="flex items-center gap-2">
+                    <span class="text-amber-800">✓</span> 24/7 Power Backup
+                </div>
+            </div>
+            
+            <p class="text-xs text-stone-500 mt-6 pt-4 border-t border-stone-100 flex items-center justify-between flex-wrap gap-2">
+                <span>* Rates are exclusive of applicable GST. Custom group packages (5+ tents) available on direct request.</span>
+                <span class="text-amber-900 font-medium">Direct Inquiries: +91 9772007882 / +91 9358872644</span>
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<!-- PRICING DYNAMIC MATRIX SCRIPT -->
+<script>
+    // Rates & Occupancy Data Matrix (Customize values easily)
+    const pricingData = {
+        cp: {
+            title: "CP Plan (Room + Breakfast)",
+            incDining: "✓ Morning Buffet Breakfast",
+            regular: { double: "3,800", single: "3,300", adult: "1,500", child: "800" },
+            weekend: { double: "4,800", single: "4,300", adult: "1,800", child: "1,000" },
+            gala:    { double: "7,500", single: "7,000", adult: "3,000", child: "1,800" }
+        },
+        map: {
+            title: "MAP Plan (Breakfast + Dinner)",
+            incDining: "✓ Buffet Dinner & Breakfast",
+            regular: { double: "4,500", single: "4,000", adult: "1,800", child: "1,000" },
+            weekend: { double: "5,500", single: "5,000", adult: "2,200", child: "1,200" },
+            gala:    { double: "8,500", single: "8,000", adult: "3,500", child: "2,000" }
+        },
+        ap: {
+            title: "AP Plan (All 3 Meals: B+L+D)",
+            incDining: "✓ All 3 Meals (Breakfast, Lunch, Dinner)",
+            regular: { double: "5,400", single: "4,800", adult: "2,200", child: "1,300" },
+            weekend: { double: "6,500", single: "6,000", adult: "2,600", child: "1,500" },
+            gala:    { double: "9,800", single: "9,000", adult: "4,000", child: "2,400" }
+        }
+    };
+
+    function selectMealPlan(planKey) {
+        const data = pricingData[planKey];
+        if (!data) return;
+
+        // 1. Update Tabs Visuals
+        document.querySelectorAll('.meal-tab').forEach(tab => {
+            tab.className = "meal-tab px-4 md:px-6 py-2.5 rounded-xl text-xs md:text-sm font-semibold transition-all duration-200 text-stone-700 hover:text-stone-900 cursor-pointer";
+        });
+        const activeTab = document.getElementById('tab-' + planKey);
+        if (activeTab) {
+            activeTab.className = "meal-tab active-tab px-4 md:px-6 py-2.5 rounded-xl text-xs md:text-sm font-semibold transition-all duration-200 bg-amber-900 text-white shadow-md cursor-pointer";
+        }
+
+        // 2. Update Main Highlighted Prices
+        document.getElementById('price-regular').innerText = data.regular.double;
+        document.getElementById('price-weekend').innerText = data.weekend.double;
+        document.getElementById('price-gala').innerText    = data.gala.double;
+
+        // Subtitles under main prices
+        document.getElementById('plan-name-regular').innerText = `Double Occupancy (${planKey.toUpperCase()} Plan)`;
+        document.getElementById('plan-name-weekend').innerText = `Double Occupancy (${planKey.toUpperCase()} Plan)`;
+        document.getElementById('plan-name-gala').innerText    = `Includes Gala & ${planKey.toUpperCase()} Dining`;
+
+        // 3. Update Detailed Sub-Breakdown
+        // Regular
+        document.getElementById('sub-regular-double').innerText = '₹' + data.regular.double;
+        document.getElementById('sub-regular-single').innerText = '₹' + data.regular.single;
+        document.getElementById('sub-regular-adult').innerText  = '₹' + data.regular.adult;
+        document.getElementById('sub-regular-child').innerText  = '₹' + data.regular.child;
+
+        // Weekend
+        document.getElementById('sub-weekend-double').innerText = '₹' + data.weekend.double;
+        document.getElementById('sub-weekend-single').innerText = '₹' + data.weekend.single;
+        document.getElementById('sub-weekend-adult').innerText  = '₹' + data.weekend.adult;
+        document.getElementById('sub-weekend-child').innerText  = '₹' + data.weekend.child;
+
+        // Gala
+        document.getElementById('sub-gala-double').innerText = '₹' + data.gala.double;
+        document.getElementById('sub-gala-adult').innerText  = '₹' + data.gala.adult;
+        document.getElementById('sub-gala-child').innerText  = '₹' + data.gala.child;
+
+        // 4. Update Inclusions dining bullet
+        document.getElementById('inc-dining-tag').innerText = data.incDining;
+
+        // 5. Update WhatsApp Inquiry Buttons with pre-filled messages
+        const baseWa = "https://wa.me/919772007882?text=";
+        document.getElementById('btn-regular-wa').href = baseWa + encodeURIComponent(
+            `Hi Desert Bloom, I would like to inquire for Standard Weekday dates with ${data.title} (₹${data.regular.double}/night). Please check availability.`
+        );
+        document.getElementById('btn-weekend-wa').href = baseWa + encodeURIComponent(
+            `Hi Desert Bloom, I would like to inquire for Weekend Peak dates with ${data.title} (₹${data.weekend.double}/night). Please check availability.`
+        );
+        document.getElementById('btn-gala-wa').href = baseWa + encodeURIComponent(
+            `Hi Desert Bloom, I would like to inquire for Festival / Gala dates with ${data.title} (₹${data.gala.double}/night). Please share details.`
+        );
+    }
+
+    // Initialize with MAP plan on load
+    document.addEventListener("DOMContentLoaded", () => {
+        selectMealPlan('map');
+    });
+</script>
