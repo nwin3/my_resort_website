@@ -1,249 +1,318 @@
-<!-- SEASONAL PRICING MATRIX TABLE -->
-<section id="pricing-matrix" class="py-16 px-4 md:px-6 bg-stone-100">
-    <div class="max-w-6xl mx-auto">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tariff & Packages | Desert Bloom Camp & Resort Jaisalmer</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body class="bg-stone-50 text-stone-800 font-sans pt-[72px]">
+
+    <div id="nav-placeholder"></div>
+
+    <!-- MAIN PRICING CONTENT -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
         
-        <!-- Section Header -->
-        <div class="text-center mb-12">
-            <span class="text-amber-800 text-xs md:text-sm font-semibold tracking-widest uppercase bg-amber-100 px-3.5 py-1 rounded-full">
-                Transparent Tariff &amp; Packages
+        <!-- Header / Intro -->
+        <div class="text-center max-w-3xl mx-auto mb-14">
+            <span class="inline-block text-amber-800 text-xs font-bold tracking-widest uppercase bg-amber-100/80 px-4 py-1.5 rounded-full mb-3 border border-amber-200">
+                Transparent Tariff & Packages
             </span>
-            <h2 class="text-3xl md:text-4xl font-serif text-stone-900 mt-3 mb-3">
-                Tariff Matrix by Dates &amp; Packages
-            </h2>
-            <p class="text-stone-600 max-w-2xl mx-auto text-sm md:text-base">
-                Rates for our <strong>Royal Swiss Tents</strong> per night (Double Occupancy). Select your travel dates and preferred meal package below.
+            <h1 class="text-3xl sm:text-4xl md:text-5xl font-serif text-amber-950 font-bold mb-4">
+                Seasonal Rates & Packages
+            </h1>
+            <p class="text-stone-600 text-sm sm:text-base leading-relaxed">
+                All tariffs are per tent, per night for <strong>Double Occupancy (2 Adults)</strong> in our handcrafted <strong>Royal Swiss Tents</strong>, including cultural performances and desert experiences.
             </p>
         </div>
 
-        <!-- Matrix Table Container -->
-        <div class="bg-white rounded-2xl shadow-lg border border-stone-200 overflow-hidden mb-10">
-            <div class="overflow-x-auto">
-                <table class="w-full text-left border-collapse min-w-[700px]">
-                    <thead>
-                        <tr class="border-b border-stone-200 bg-stone-900 text-white">
-                            <th class="py-5 px-6 font-serif text-base md:text-lg font-bold w-1/4">
-                                Dates / Season
-                            </th>
-                            
-                            <!-- Column 1: CP -->
-                            <th class="py-5 px-6 text-center w-1/4 border-l border-stone-800">
-                                <span class="block text-xs uppercase tracking-wider text-amber-300 font-semibold">Breakfast Only</span>
-                                <span class="text-lg md:text-xl font-bold font-serif">CP Plan</span>
-                                <span class="block text-xs text-stone-400 font-normal mt-0.5">Stay + Buffet Breakfast</span>
-                            </th>
+        <!-- 3-COLUMN PACKAGE TILES -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch mb-16">
 
-                            <!-- Column 2: MAP (Highlighted) -->
-                            <th class="py-5 px-6 text-center w-1/4 border-l border-stone-800 bg-amber-950/80 relative">
-                                <span class="absolute -top-0 right-4 bg-amber-500 text-stone-900 text-[10px] uppercase tracking-wider font-extrabold px-2 py-0.5 rounded-b shadow">
-                                    Most Popular
-                                </span>
-                                <span class="block text-xs uppercase tracking-wider text-amber-300 font-semibold">Half Board</span>
-                                <span class="text-lg md:text-xl font-bold font-serif text-amber-100">MAP Plan</span>
-                                <span class="block text-xs text-amber-200/80 font-normal mt-0.5">Breakfast + Dinner</span>
-                            </th>
+            <!-- 1. CP PLAN (Bed & Breakfast) -->
+            <div class="bg-white rounded-3xl p-7 border border-stone-200 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-xs font-bold tracking-wider uppercase text-stone-500 bg-stone-100 px-3 py-1 rounded-full">
+                            Bed & Breakfast
+                        </span>
+                        <span class="text-xs text-stone-400 font-medium">Double Sharing</span>
+                    </div>
 
-                            <!-- Column 3: AP -->
-                            <th class="py-5 px-6 text-center w-1/4 border-l border-stone-800">
-                                <span class="block text-xs uppercase tracking-wider text-amber-300 font-semibold">Full Board</span>
-                                <span class="text-lg md:text-xl font-bold font-serif">AP Plan</span>
-                                <span class="block text-xs text-stone-400 font-normal mt-0.5">All 3 Meals (B + L + D)</span>
-                            </th>
-                        </tr>
-                    </thead>
-                    <tbody class="divide-y divide-stone-200 text-stone-700 text-sm md:text-base">
+                    <h2 class="text-2xl font-serif font-bold text-stone-900 mb-1">CP Package</h2>
+                    <p class="text-xs text-stone-500 mb-6">Royal Tent stay with morning buffet breakfast & desert activities.</p>
 
-                        <!-- Row 1: Regular Weekdays -->
-                        <tr class="hover:bg-amber-50/40 transition">
-                            <td class="py-5 px-6">
-                                <div class="font-bold text-stone-900 text-base">Regular Weekdays</div>
-                                <div class="text-xs text-stone-500 mt-0.5">Sun – Thu (Excl. Peak Dates)</div>
-                                <div class="inline-block mt-2 text-[11px] bg-stone-100 text-stone-600 px-2 py-0.5 rounded font-medium">Standard Season</div>
-                            </td>
-                            
-                            <!-- CP -->
-                            <td class="py-5 px-6 text-center border-l border-stone-100">
-                                <div class="text-2xl font-extrabold text-stone-900">₹3,800</div>
-                                <div class="text-xs text-stone-500 mb-2">/ night (2 Pax)</div>
-                                <a href="https://wa.me/919772007882?text=Hello%20Desert%20Bloom%2C%20I%20want%20to%20book%20Regular%20Weekdays%20with%20CP%20Plan%20(%E2%82%B93800%2Fnight).%20Please%20check%20availability." target="_blank" rel="noopener noreferrer"
-                                   class="inline-block text-xs font-semibold text-amber-900 hover:text-amber-700 underline">
-                                    Book via WhatsApp &rarr;
-                                </a>
-                            </td>
+                    <!-- Meal Badge -->
+                    <div class="bg-stone-50 rounded-xl p-3 mb-6 border border-stone-100 text-xs text-stone-700 flex items-center gap-2.5">
+                        <i class="fa-solid fa-mug-saucer text-amber-700 text-sm"></i>
+                        <span>Includes: <strong>Morning Buffet Breakfast</strong></span>
+                    </div>
 
-                            <!-- MAP -->
-                            <td class="py-5 px-6 text-center border-l border-stone-100 bg-amber-50/30">
-                                <div class="text-2xl font-extrabold text-amber-900">₹4,500</div>
-                                <div class="text-xs text-amber-800/80 mb-2">/ night (2 Pax)</div>
-                                <a href="https://wa.me/919772007882?text=Hello%20Desert%20Bloom%2C%20I%20want%20to%20book%20Regular%20Weekdays%20with%20MAP%20Plan%20(%E2%82%B94500%2Fnight).%20Please%20check%20availability." target="_blank" rel="noopener noreferrer"
-                                   class="inline-block bg-amber-800 hover:bg-amber-900 text-white text-xs font-medium px-3 py-1.5 rounded-lg transition shadow-sm">
-                                    Book MAP Plan
-                                </a>
-                            </td>
+                    <!-- Rates Breakdown by Season -->
+                    <div class="space-y-3.5 mb-8">
+                        <div class="flex items-center justify-between pb-3 border-b border-stone-100">
+                            <div>
+                                <span class="font-medium text-stone-800 text-sm block">Regular Weekdays</span>
+                                <span class="text-[11px] text-stone-400">Sun – Thu (Standard)</span>
+                            </div>
+                            <span class="text-lg font-bold text-stone-900">₹3,800</span>
+                        </div>
 
-                            <!-- AP -->
-                            <td class="py-5 px-6 text-center border-l border-stone-100">
-                                <div class="text-2xl font-extrabold text-stone-900">₹5,400</div>
-                                <div class="text-xs text-stone-500 mb-2">/ night (2 Pax)</div>
-                                <a href="https://wa.me/919772007882?text=Hello%20Desert%20Bloom%2C%20I%20want%20to%20book%20Regular%20Weekdays%20with%20AP%20Plan%20(%E2%82%B95400%2Fnight).%20Please%20check%20availability." target="_blank" rel="noopener noreferrer"
-                                   class="inline-block text-xs font-semibold text-amber-900 hover:text-amber-700 underline">
-                                    Book via WhatsApp &rarr;
-                                </a>
-                            </td>
-                        </tr>
+                        <div class="flex items-center justify-between pb-3 border-b border-stone-100">
+                            <div>
+                                <span class="font-medium text-stone-800 text-sm block">Regular Weekends</span>
+                                <span class="text-[11px] text-stone-400">Fri & Sat Nights</span>
+                            </div>
+                            <span class="text-lg font-bold text-stone-900">₹4,800</span>
+                        </div>
 
-                        <!-- Row 2: Regular Weekends -->
-                        <tr class="hover:bg-amber-50/40 transition">
-                            <td class="py-5 px-6">
-                                <div class="font-bold text-stone-900 text-base">Regular Weekends</div>
-                                <div class="text-xs text-stone-500 mt-0.5">Fri &amp; Sat Nights</div>
-                                <div class="inline-block mt-2 text-[11px] bg-amber-100 text-amber-800 px-2 py-0.5 rounded font-medium">Weekend Getaway</div>
-                            </td>
-                            
-                            <!-- CP -->
-                            <td class="py-5 px-6 text-center border-l border-stone-100">
-                                <div class="text-2xl font-extrabold text-stone-900">₹4,800</div>
-                                <div class="text-xs text-stone-500 mb-2">/ night (2 Pax)</div>
-                                <a href="https://wa.me/919772007882?text=Hello%20Desert%20Bloom%2C%20I%20want%20to%20book%20Weekend%20Dates%20with%20CP%20Plan%20(%E2%82%B94800%2Fnight).%20Please%20check%20availability." target="_blank" rel="noopener noreferrer"
-                                   class="inline-block text-xs font-semibold text-amber-900 hover:text-amber-700 underline">
-                                    Book via WhatsApp &rarr;
-                                </a>
-                            </td>
+                        <div class="flex items-center justify-between pb-3 border-b border-stone-100">
+                            <div>
+                                <span class="font-medium text-stone-800 text-sm block">Peak Winter Season</span>
+                                <span class="text-[11px] text-stone-400">Dec 15–23 & Jan 3–15</span>
+                            </div>
+                            <span class="text-lg font-bold text-stone-900">₹5,800</span>
+                        </div>
 
-                            <!-- MAP -->
-                            <td class="py-5 px-6 text-center border-l border-stone-100 bg-amber-50/30">
-                                <div class="text-2xl font-extrabold text-amber-900">₹5,500</div>
-                                <div class="text-xs text-amber-800/80 mb-2">/ night (2 Pax)</div>
-                                <a href="https://wa.me/919772007882?text=Hello%20Desert%20Bloom%2C%20I%20want%20to%20book%20Weekend%20Dates%20with%20MAP%20Plan%20(%E2%82%B95500%2Fnight).%20Please%20check%20availability." target="_blank" rel="noopener noreferrer"
-                                   class="inline-block bg-amber-800 hover:bg-amber-900 text-white text-xs font-medium px-3 py-1.5 rounded-lg transition shadow-sm">
-                                    Book MAP Plan
-                                </a>
-                            </td>
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <span class="font-medium text-purple-900 text-sm block">Gala & Festival Nights</span>
+                                <span class="text-[11px] text-purple-600">Diwali, Dec 24–Jan 2</span>
+                            </div>
+                            <span class="text-lg font-bold text-purple-900">₹7,500</span>
+                        </div>
+                    </div>
+                </div>
 
-                            <!-- AP -->
-                            <td class="py-5 px-6 text-center border-l border-stone-100">
-                                <div class="text-2xl font-extrabold text-stone-900">₹6,500</div>
-                                <div class="text-xs text-stone-500 mb-2">/ night (2 Pax)</div>
-                                <a href="https://wa.me/919772007882?text=Hello%20Desert%20Bloom%2C%20I%20want%20to%20book%20Weekend%20Dates%20with%20AP%20Plan%20(%E2%82%B96500%2Fnight).%20Please%20check%20availability." target="_blank" rel="noopener noreferrer"
-                                   class="inline-block text-xs font-semibold text-amber-900 hover:text-amber-700 underline">
-                                    Book via WhatsApp &rarr;
-                                </a>
-                            </td>
-                        </tr>
-
-                        <!-- Row 3: Peak Winter & Holidays -->
-                        <tr class="hover:bg-amber-50/40 transition">
-                            <td class="py-5 px-6">
-                                <div class="font-bold text-stone-900 text-base">Peak Winter &amp; Holidays</div>
-                                <div class="text-xs text-stone-500 mt-0.5">Dec 15–23, Jan 3–15 &amp; Long Weekends</div>
-                                <div class="inline-block mt-2 text-[11px] bg-blue-100 text-blue-800 px-2 py-0.5 rounded font-medium">High Season</div>
-                            </td>
-                            
-                            <!-- CP -->
-                            <td class="py-5 px-6 text-center border-l border-stone-100">
-                                <div class="text-2xl font-extrabold text-stone-900">₹5,800</div>
-                                <div class="text-xs text-stone-500 mb-2">/ night (2 Pax)</div>
-                                <a href="https://wa.me/919772007882?text=Hello%20Desert%20Bloom%2C%20I%20want%20to%20book%20Peak%20Winter%20Dates%20with%20CP%20Plan%20(%E2%82%B95800%2Fnight).%20Please%20check%20availability." target="_blank" rel="noopener noreferrer"
-                                   class="inline-block text-xs font-semibold text-amber-900 hover:text-amber-700 underline">
-                                    Book via WhatsApp &rarr;
-                                </a>
-                            </td>
-
-                            <!-- MAP -->
-                            <td class="py-5 px-6 text-center border-l border-stone-100 bg-amber-50/30">
-                                <div class="text-2xl font-extrabold text-amber-900">₹6,800</div>
-                                <div class="text-xs text-amber-800/80 mb-2">/ night (2 Pax)</div>
-                                <a href="https://wa.me/919772007882?text=Hello%20Desert%20Bloom%2C%20I%20want%20to%20book%20Peak%20Winter%20Dates%20with%20MAP%20Plan%20(%E2%82%B96800%2Fnight).%20Please%20check%20availability." target="_blank" rel="noopener noreferrer"
-                                   class="inline-block bg-amber-800 hover:bg-amber-900 text-white text-xs font-medium px-3 py-1.5 rounded-lg transition shadow-sm">
-                                    Book MAP Plan
-                                </a>
-                            </td>
-
-                            <!-- AP -->
-                            <td class="py-5 px-6 text-center border-l border-stone-100">
-                                <div class="text-2xl font-extrabold text-stone-900">₹7,800</div>
-                                <div class="text-xs text-stone-500 mb-2">/ night (2 Pax)</div>
-                                <a href="https://wa.me/919772007882?text=Hello%20Desert%20Bloom%2C%20I%20want%20to%20book%20Peak%20Winter%20Dates%20with%20AP%20Plan%20(%E2%82%B97800%2Fnight).%20Please%20check%20availability." target="_blank" rel="noopener noreferrer"
-                                   class="inline-block text-xs font-semibold text-amber-900 hover:text-amber-700 underline">
-                                    Book via WhatsApp &rarr;
-                                </a>
-                            </td>
-                        </tr>
-
-                        <!-- Row 4: Festival & New Year Gala -->
-                        <tr class="hover:bg-amber-50/40 transition bg-amber-50/20">
-                            <td class="py-5 px-6">
-                                <div class="font-bold text-purple-900 text-base">Gala / Festival Dates</div>
-                                <div class="text-xs text-stone-500 mt-0.5">Diwali, Dec 24–Jan 2 &amp; Desert Festival</div>
-                                <div class="inline-block mt-2 text-[11px] bg-purple-100 text-purple-800 px-2 py-0.5 rounded font-medium">Includes Gala Night</div>
-                            </td>
-                            
-                            <!-- CP -->
-                            <td class="py-5 px-6 text-center border-l border-stone-100">
-                                <div class="text-2xl font-extrabold text-stone-900">₹7,500</div>
-                                <div class="text-xs text-stone-500 mb-2">/ night (2 Pax)</div>
-                                <a href="https://wa.me/919772007882?text=Hello%20Desert%20Bloom%2C%20I%20want%20to%20book%20Gala%2FFestival%20Dates%20with%20CP%20Plan%20(%E2%82%B97500%2Fnight).%20Please%20check%20availability." target="_blank" rel="noopener noreferrer"
-                                   class="inline-block text-xs font-semibold text-amber-900 hover:text-amber-700 underline">
-                                    Book via WhatsApp &rarr;
-                                </a>
-                            </td>
-
-                            <!-- MAP -->
-                            <td class="py-5 px-6 text-center border-l border-stone-100 bg-amber-50/30">
-                                <div class="text-2xl font-extrabold text-amber-900">₹8,500</div>
-                                <div class="text-xs text-amber-800/80 mb-2">/ night (2 Pax)</div>
-                                <a href="https://wa.me/919772007882?text=Hello%20Desert%20Bloom%2C%20I%20want%20to%20book%20Gala%2FFestival%20Dates%20with%20MAP%20Plan%20(%E2%82%B98500%2Fnight).%20Please%20check%20availability." target="_blank" rel="noopener noreferrer"
-                                   class="inline-block bg-amber-800 hover:bg-amber-900 text-white text-xs font-medium px-3 py-1.5 rounded-lg transition shadow-sm">
-                                    Book MAP Plan
-                                </a>
-                            </td>
-
-                            <!-- AP -->
-                            <td class="py-5 px-6 text-center border-l border-stone-100">
-                                <div class="text-2xl font-extrabold text-stone-900">₹9,800</div>
-                                <div class="text-xs text-stone-500 mb-2">/ night (2 Pax)</div>
-                                <a href="https://wa.me/919772007882?text=Hello%20Desert%20Bloom%2C%20I%20want%20to%20book%20Gala%2FFestival%20Dates%20with%20AP%20Plan%20(%E2%82%B99800%2Fnight).%20Please%20check%20availability." target="_blank" rel="noopener noreferrer"
-                                   class="inline-block text-xs font-semibold text-amber-900 hover:text-amber-700 underline">
-                                    Book via WhatsApp &rarr;
-                                </a>
-                            </td>
-                        </tr>
-
-                    </tbody>
-                </table>
+                <a href="https://wa.me/919772007882?text=Hello%20Desert%20Bloom%2C%20I%20would%20like%20to%20inquire%20about%20booking%20the%20CP%20Package%20(Bed%20%26%20Breakfast).%20Please%20check%20availability."
+                   target="_blank" rel="noopener noreferrer"
+                   class="w-full inline-flex items-center justify-center gap-2 bg-stone-900 hover:bg-stone-800 text-white font-medium py-3 px-4 rounded-xl transition text-sm shadow-sm">
+                    <i class="fa-brands fa-whatsapp text-emerald-400 text-base"></i>
+                    Inquire CP Package
+                </a>
             </div>
 
-            <!-- Table Footer: Extra Person Charges -->
-            <div class="p-4 md:p-6 bg-stone-50 border-t border-stone-200 text-xs md:text-sm text-stone-600 flex flex-col md:flex-row justify-between items-center gap-3">
-                <div class="flex items-center gap-4 flex-wrap justify-center md:justify-start">
-                    <span><strong>Extra Adult (with Bed):</strong> ₹1,800 – ₹2,500/night</span>
-                    <span class="text-stone-300">|</span>
-                    <span><strong>Child (6–11 yrs):</strong> ₹1,000 – ₹1,500/night</span>
-                    <span class="text-stone-300">|</span>
-                    <span><strong>Child (Below 5 yrs):</strong> Complimentary</span>
+            <!-- 2. MAP PLAN (Half Board - HIGHLIGHTED) -->
+            <div class="bg-gradient-to-b from-amber-50/70 to-white rounded-3xl p-7 border-2 border-amber-600 shadow-xl relative hover:shadow-2xl transition-all duration-300 flex flex-col justify-between transform lg:-translate-y-2">
+                <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-amber-700 text-white text-[11px] font-bold uppercase tracking-widest px-4 py-1 rounded-full shadow-md">
+                    Most Recommended
                 </div>
-                <div class="text-amber-900 font-medium">
-                    * Rates exclusive of 12% GST
+
+                <div>
+                    <div class="flex items-center justify-between mb-4 mt-2">
+                        <span class="text-xs font-bold tracking-wider uppercase text-amber-900 bg-amber-200/80 px-3 py-1 rounded-full">
+                            Breakfast + Dinner
+                        </span>
+                        <span class="text-xs text-amber-800 font-medium">Double Sharing</span>
+                    </div>
+
+                    <h2 class="text-2xl font-serif font-bold text-amber-950 mb-1">MAP Package</h2>
+                    <p class="text-xs text-stone-600 mb-6">Complete desert escape with royal dinner, breakfast & campfire folk nights.</p>
+
+                    <!-- Meal Badge -->
+                    <div class="bg-amber-100/60 rounded-xl p-3 mb-6 border border-amber-200 text-xs text-amber-950 flex items-center gap-2.5">
+                        <i class="fa-solid fa-utensils text-amber-800 text-sm"></i>
+                        <span>Includes: <strong>Rajasthani Dinner & Morning Breakfast</strong></span>
+                    </div>
+
+                    <!-- Rates Breakdown by Season -->
+                    <div class="space-y-3.5 mb-8">
+                        <div class="flex items-center justify-between pb-3 border-b border-amber-100">
+                            <div>
+                                <span class="font-medium text-stone-800 text-sm block">Regular Weekdays</span>
+                                <span class="text-[11px] text-stone-500">Sun – Thu (Standard)</span>
+                            </div>
+                            <span class="text-xl font-extrabold text-amber-900">₹4,500</span>
+                        </div>
+
+                        <div class="flex items-center justify-between pb-3 border-b border-amber-100">
+                            <div>
+                                <span class="font-medium text-stone-800 text-sm block">Regular Weekends</span>
+                                <span class="text-[11px] text-stone-500">Fri & Sat Nights</span>
+                            </div>
+                            <span class="text-xl font-extrabold text-amber-900">₹5,500</span>
+                        </div>
+
+                        <div class="flex items-center justify-between pb-3 border-b border-amber-100">
+                            <div>
+                                <span class="font-medium text-stone-800 text-sm block">Peak Winter Season</span>
+                                <span class="text-[11px] text-stone-500">Dec 15–23 & Jan 3–15</span>
+                            </div>
+                            <span class="text-xl font-extrabold text-amber-900">₹6,800</span>
+                        </div>
+
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <span class="font-medium text-purple-900 text-sm block">Gala & Festival Nights</span>
+                                <span class="text-[11px] text-purple-700">Diwali, Dec 24–Jan 2</span>
+                            </div>
+                            <span class="text-xl font-extrabold text-purple-900">₹8,500</span>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="https://wa.me/919772007882?text=Hello%20Desert%20Bloom%2C%20I%20would%20like%20to%20inquire%20about%20booking%20the%20MAP%20Package%20(Breakfast%20%2B%20Dinner).%20Please%20check%20availability."
+                   target="_blank" rel="noopener noreferrer"
+                   class="w-full inline-flex items-center justify-center gap-2 bg-amber-800 hover:bg-amber-900 text-white font-medium py-3 px-4 rounded-xl transition text-sm shadow-md">
+                    <i class="fa-brands fa-whatsapp text-emerald-400 text-base"></i>
+                    Book MAP Package
+                </a>
+            </div>
+
+            <!-- 3. AP PLAN (Full Board) -->
+            <div class="bg-white rounded-3xl p-7 border border-stone-200 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-xs font-bold tracking-wider uppercase text-stone-500 bg-stone-100 px-3 py-1 rounded-full">
+                            Full Board (All Meals)
+                        </span>
+                        <span class="text-xs text-stone-400 font-medium">Double Sharing</span>
+                    </div>
+
+                    <h2 class="text-2xl font-serif font-bold text-stone-900 mb-1">AP Package</h2>
+                    <p class="text-xs text-stone-500 mb-6">All-inclusive culinary journey with Breakfast, Lunch & Dinner catered on-site.</p>
+
+                    <!-- Meal Badge -->
+                    <div class="bg-stone-50 rounded-xl p-3 mb-6 border border-stone-100 text-xs text-stone-700 flex items-center gap-2.5">
+                        <i class="fa-solid fa-bowl-food text-amber-700 text-sm"></i>
+                        <span>Includes: <strong>Breakfast, Lunch & Royal Dinner</strong></span>
+                    </div>
+
+                    <!-- Rates Breakdown by Season -->
+                    <div class="space-y-3.5 mb-8">
+                        <div class="flex items-center justify-between pb-3 border-b border-stone-100">
+                            <div>
+                                <span class="font-medium text-stone-800 text-sm block">Regular Weekdays</span>
+                                <span class="text-[11px] text-stone-400">Sun – Thu (Standard)</span>
+                            </div>
+                            <span class="text-lg font-bold text-stone-900">₹5,400</span>
+                        </div>
+
+                        <div class="flex items-center justify-between pb-3 border-b border-stone-100">
+                            <div>
+                                <span class="font-medium text-stone-800 text-sm block">Regular Weekends</span>
+                                <span class="text-[11px] text-stone-400">Fri & Sat Nights</span>
+                            </div>
+                            <span class="text-lg font-bold text-stone-900">₹6,500</span>
+                        </div>
+
+                        <div class="flex items-center justify-between pb-3 border-b border-stone-100">
+                            <div>
+                                <span class="font-medium text-stone-800 text-sm block">Peak Winter Season</span>
+                                <span class="text-[11px] text-stone-400">Dec 15–23 & Jan 3–15</span>
+                            </div>
+                            <span class="text-lg font-bold text-stone-900">₹7,800</span>
+                        </div>
+
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <span class="font-medium text-purple-900 text-sm block">Gala & Festival Nights</span>
+                                <span class="text-[11px] text-purple-600">Diwali, Dec 24–Jan 2</span>
+                            </div>
+                            <span class="text-lg font-bold text-purple-900">₹9,800</span>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="https://wa.me/919772007882?text=Hello%20Desert%20Bloom%2C%20I%20would%20like%20to%20inquire%20about%20booking%20the%20AP%20Package%20(All%20Meals).%20Please%20check%20availability."
+                   target="_blank" rel="noopener noreferrer"
+                   class="w-full inline-flex items-center justify-center gap-2 bg-stone-900 hover:bg-stone-800 text-white font-medium py-3 px-4 rounded-xl transition text-sm shadow-sm">
+                    <i class="fa-brands fa-whatsapp text-emerald-400 text-base"></i>
+                    Inquire AP Package
+                </a>
+            </div>
+
+        </div>
+
+        <!-- EXTRA OCCUPANCY POLICY STRIP -->
+        <div class="bg-amber-50/60 border border-amber-200/80 rounded-2xl p-5 mb-14 text-xs md:text-sm text-stone-700">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-3 text-center md:text-left">
+                <div class="flex items-center gap-4 flex-wrap justify-center">
+                    <span><strong class="text-amber-950">Extra Adult (with Bed):</strong> ₹1,800 – ₹2,500 / night</span>
+                    <span class="hidden sm:inline text-amber-300">|</span>
+                    <span><strong class="text-amber-950">Child (6–11 yrs):</strong> ₹1,000 – ₹1,500 / night</span>
+                    <span class="hidden sm:inline text-amber-300">|</span>
+                    <span><strong class="text-amber-950">Child (&lt; 5 yrs):</strong> Complimentary</span>
+                </div>
+                <div class="text-amber-900 font-semibold whitespace-nowrap">
+                    * Rates exclusive of applicable GST
                 </div>
             </div>
         </div>
 
-        <!-- Inclusions Summary Strip -->
-        <div class="bg-white rounded-2xl p-6 border border-stone-200 shadow-sm text-xs md:text-sm text-stone-700">
-            <h4 class="font-serif font-bold text-amber-900 text-base mb-3 flex items-center gap-2">
-                <i class="fa-solid fa-circle-check text-emerald-600"></i>
-                All Packages Include Full Desert Cultural Experience:
-            </h4>
-            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-stone-600">
-                <div>✓ Sunset Camel Safari</div>
-                <div>✓ Dhol &amp; Tikka Welcome</div>
-                <div>✓ Evening Tea &amp; Rajasthani Snacks</div>
-                <div>✓ Kalbeliya Dance &amp; Live Folk Music</div>
-                <div>✓ Campfire Evening</div>
-                <div>✓ Buffet Dining (as per plan)</div>
-                <div>✓ Attached Western Bathroom with Geyser</div>
-                <div>✓ 24/7 Power Backup</div>
+        <!-- COMPLIMENTARY INCLUSIONS (GRID TILES) -->
+        <div class="bg-white rounded-3xl p-8 border border-stone-200 shadow-sm">
+            <div class="text-center max-w-xl mx-auto mb-8">
+                <h3 class="text-2xl font-serif font-bold text-amber-950 mb-2">
+                    Every Stay Includes Thar Desert Experiences
+                </h3>
+                <p class="text-stone-500 text-xs sm:text-sm">
+                    No hidden charges. All packages include our signature cultural and safari activities.
+                </p>
             </div>
-        </div>
 
-    </div>
-</section>
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-5">
+                <div class="flex flex-col items-center text-center p-4 rounded-2xl bg-stone-50 border border-stone-100">
+                    <div class="w-10 h-10 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-lg mb-2.5">
+                        <i class="fa-solid fa-bell"></i>
+                    </div>
+                    <span class="font-bold text-xs sm:text-sm text-stone-800">Traditional Welcome</span>
+                    <span class="text-[11px] text-stone-500 mt-0.5">Dhol & Aarti Tikka</span>
+                </div>
+
+                <div class="flex flex-col items-center text-center p-4 rounded-2xl bg-stone-50 border border-stone-100">
+                    <div class="w-10 h-10 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-lg mb-2.5">
+                        <i class="fa-solid fa-sun"></i>
+                    </div>
+                    <span class="font-bold text-xs sm:text-sm text-stone-800">Sunset Camel Safari</span>
+                    <span class="text-[11px] text-stone-500 mt-0.5">1 Camel / 2 Pax on Dunes</span>
+                </div>
+
+                <div class="flex flex-col items-center text-center p-4 rounded-2xl bg-stone-50 border border-stone-100">
+                    <div class="w-10 h-10 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-lg mb-2.5">
+                        <i class="fa-solid fa-guitar"></i>
+                    </div>
+                    <span class="font-bold text-xs sm:text-sm text-stone-800">Kalbeliya Dance</span>
+                    <span class="text-[11px] text-stone-500 mt-0.5">Live Manganiyar Folk Music</span>
+                </div>
+
+                <div class="flex flex-col items-center text-center p-4 rounded-2xl bg-stone-50 border border-stone-100">
+                    <div class="w-10 h-10 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-lg mb-2.5">
+                        <i class="fa-solid fa-fire"></i>
+                    </div>
+                    <span class="font-bold text-xs sm:text-sm text-stone-800">Bonfire & Snacks</span>
+                    <span class="text-[11px] text-stone-500 mt-0.5">Evening Chai & Pakoras</span>
+                </div>
+
+                <div class="flex flex-col items-center text-center p-4 rounded-2xl bg-stone-50 border border-stone-100">
+                    <div class="w-10 h-10 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-lg mb-2.5">
+                        <i class="fa-solid fa-shower"></i>
+                    </div>
+                    <span class="font-bold text-xs sm:text-sm text-stone-800">Modern En-Suite</span>
+                    <span class="text-[11px] text-stone-500 mt-0.5">Attached Western Bath & Geyser</span>
+                </div>
+
+                <div class="flex flex-col items-center text-center p-4 rounded-2xl bg-stone-50 border border-stone-100">
+                    <div class="w-10 h-10 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-lg mb-2.5">
+                        <i class="fa-solid fa-bolt"></i>
+                    </div>
+                    <span class="font-bold text-xs sm:text-sm text-stone-800">24/7 Power Backup</span>
+                    <span class="text-[11px] text-stone-500 mt-0.5">Continuous Lighting & Charging</span>
+                </div>
+
+                <div class="flex flex-col items-center text-center p-4 rounded-2xl bg-stone-50 border border-stone-100">
+                    <div class="w-10 h-10 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-lg mb-2.5">
+                        <i class="fa-solid fa-utensils"></i>
+                    </div>
+                    <span class="font-bold text-xs sm:text-sm text-stone-800">Buffet Dining</span>
+                    <span class="text-[11px] text-stone-500 mt-0.5">Fresh Authentic Delicacies</span>
+                </div>
+
+                <div class="flex flex-col items-center text-center p-4 rounded-2xl bg-stone-50 border border-stone-100">
+                    <div class="w-10 h-10 rounded-full bg-amber-100 text-amber-800 flex items-center justify-center text-lg mb-2.5">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <span class="font-bold text-xs sm:text-sm text-stone-80
