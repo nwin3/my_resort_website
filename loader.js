@@ -1,37 +1,59 @@
 document.addEventListener("DOMContentLoaded", () => {
     loadNavbar();
+    loadFooter();
 });
 
+// Load Navbar
 function loadNavbar() {
     const navPlaceholder = document.getElementById("nav-placeholder");
     if (!navPlaceholder) return;
 
-    // If already inside /pages/, fetch directly. Otherwise, step into pages/
     const isInsidePages = window.location.pathname.includes("/pages/");
     const targetPath = isInsidePages ? "navbar.html" : "pages/navbar.html";
 
     fetch(targetPath)
         .then(response => {
             if (!response.ok) {
-                // Secondary fallback in case of local file server quirks
                 const fallback = isInsidePages ? "./navbar.html" : "./pages/navbar.html";
                 return fetch(fallback);
             }
             return response;
         })
         .then(response => {
-            if (!response.ok) {
-                throw new Error(`Failed to load ${targetPath} (HTTP ${response.status})`);
-            }
+            if (!response.ok) throw new Error(`HTTP ${response.status}`);
             return response.text();
         })
         .then(html => {
             navPlaceholder.innerHTML = html;
-            initNavbarEvents(); // Bind popup & menu click handlers
+            initNavbarEvents();
         })
-        .catch(err => {
-            console.error("Navbar loading error:", err);
-        });
+        .catch(err => console.error("Navbar loading error:", err));
+}
+
+// Load Footer
+function loadFooter() {
+    const footerPlaceholder = document.getElementById("footer-placeholder");
+    if (!footerPlaceholder) return;
+
+    const isInsidePages = window.location.pathname.includes("/pages/");
+    const targetPath = isInsidePages ? "footer.html" : "pages/footer.html";
+
+    fetch(targetPath)
+        .then(response => {
+            if (!response.ok) {
+                const fallback = isInsidePages ? "./footer.html" : "./pages/footer.html";
+                return fetch(fallback);
+            }
+            return response;
+        })
+        .then(response => {
+            if (!response.ok) throw new Error(`HTTP ${response.status}`);
+            return response.text();
+        })
+        .then(html => {
+            footerPlaceholder.innerHTML = html;
+        })
+        .catch(err => console.error("Footer loading error:", err));
 }
 
 function initNavbarEvents() {
@@ -41,7 +63,6 @@ function initNavbarEvents() {
     const closeBtn = document.getElementById('close-modal-btn');
     const bookButtons = document.querySelectorAll('.book-now-btn');
 
-    // Toggle Mobile Drawer
     if (toggle && menu) {
         toggle.addEventListener('click', () => {
             menu.classList.toggle('hidden');
@@ -49,7 +70,6 @@ function initNavbarEvents() {
         });
     }
 
-    // Open Booking Notice Modal
     bookButtons.forEach(btn => {
         btn.addEventListener('click', (e) => {
             e.preventDefault();
@@ -64,7 +84,6 @@ function initNavbarEvents() {
         });
     });
 
-    // Close Modal Button (X)
     if (closeBtn && modal) {
         closeBtn.addEventListener('click', () => {
             modal.classList.add('hidden');
@@ -72,7 +91,6 @@ function initNavbarEvents() {
         });
     }
 
-    // Close Modal on Outside Backdrop Click
     if (modal) {
         modal.addEventListener('click', (e) => {
             if (e.target === modal) {
