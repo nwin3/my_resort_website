@@ -1,10 +1,12 @@
 <nav class="fixed top-0 w-full z-50 bg-white border-b border-stone-200 shadow-sm">
-    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+    <div class="max-w-7xl mx-auto px-4 md:px-6 py-3 flex justify-between items-center gap-4">
         <!-- Logo -->
-        <div class="font-serif text-2xl text-amber-900 font-bold">Desert Bloom (Booking Starts from 10/11/2026)</div>
+        <div class="font-serif text-lg md:text-2xl text-amber-900 font-bold leading-tight">
+            Desert Bloom <span class="text-xs md:text-sm font-sans font-normal text-stone-500 block sm:inline">(Booking Starts from 10/11/2026)</span>
+        </div>
         
-        <!-- Desktop Menu -->
-        <div class="hidden md:flex items-center gap-6 text-stone-700 font-medium">
+        <!-- Desktop Menu & Quick Contact -->
+        <div class="hidden md:flex items-center gap-4 lg:gap-6 text-stone-700 font-medium text-sm lg:text-base">
             <a href="/" class="hover:text-amber-900 transition">Home</a>
             <a href="/pages/destination.html" class="hover:text-amber-900 transition">Destinations</a>
             <a href="/pages/experience.html" class="hover:text-amber-900 transition">Experiences</a>
@@ -12,37 +14,71 @@
             <a href="/pages/gallery.html" class="hover:text-amber-900 transition">Gallery</a>
             <a href="/pages/contact_us.html" class="hover:text-amber-900 transition">Contact</a>
             <a href="/pages/about_us.html" class="hover:text-amber-900 transition">About Us</a>
+
+            <!-- Quick Contact Icons (Desktop) -->
+            <div class="flex items-center gap-1.5 border-l border-stone-300 pl-3">
+                <!-- WhatsApp -->
+                <a href="https://wa.me/919358872644" target="_blank" rel="noopener noreferrer" 
+                   aria-label="Chat on WhatsApp"
+                   class="w-8 h-8 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white flex items-center justify-center transition shadow-sm">
+                    <i class="fa-brands fa-whatsapp text-base"></i>
+                </a>
+
+                <!-- Instagram -->
+                <a href="https://www.instagram.com/desert_bloom_camp_and_resort/" target="_blank" rel="noopener noreferrer" 
+                   aria-label="Follow us on Instagram"
+                   class="w-8 h-8 rounded-full bg-gradient-to-tr from-amber-500 via-pink-600 to-purple-600 hover:opacity-90 text-white flex items-center justify-center transition shadow-sm">
+                    <i class="fa-brands fa-instagram text-sm"></i>
+                </a>
+
+                <!-- Direct Call -->
+                <a href="tel:+919358872644" 
+                   aria-label="Call Us"
+                   class="w-8 h-8 rounded-full bg-amber-700 hover:bg-amber-600 text-white flex items-center justify-center transition shadow-sm">
+                    <i class="fa-solid fa-phone text-xs"></i>
+                </a>
+            </div>
             
             <!-- Book Now CTA -->
-            <a href="#booking-section" class="bg-amber-800 text-white px-5 py-2 rounded-lg hover:bg-amber-900 transition shadow-md">
+            <a href="#booking-section" class="bg-amber-800 text-white px-4 py-2 rounded-lg hover:bg-amber-900 transition shadow-md whitespace-nowrap">
                 Book Now
             </a>
         </div>
 
-        <!-- Mobile Toggle Button -->
-        <button id="mobile-toggle" class="md:hidden text-2xl text-stone-800">☰</button>
+        <!-- Mobile Header Actions (Visible on small screens) -->
+        <div class="flex md:hidden items-center gap-2">
+            <!-- Mobile Quick Buttons -->
+            <a href="https://wa.me/919358872644" target="_blank" rel="noopener noreferrer" 
+               aria-label="Chat on WhatsApp"
+               class="w-8 h-8 rounded-full bg-emerald-600 text-white flex items-center justify-center text-sm shadow-sm">
+                <i class="fa-brands fa-whatsapp"></i>
+            </a>
+
+            <a href="https://www.instagram.com/desert_bloom_camp_and_resort/" target="_blank" rel="noopener noreferrer" 
+               aria-label="Follow us on Instagram"
+               class="w-8 h-8 rounded-full bg-gradient-to-tr from-amber-500 via-pink-600 to-purple-600 text-white flex items-center justify-center text-xs shadow-sm">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+
+            <a href="tel:+919358872644" 
+               aria-label="Call Us"
+               class="w-8 h-8 rounded-full bg-amber-700 text-white flex items-center justify-center text-xs shadow-sm">
+                <i class="fa-solid fa-phone"></i>
+            </a>
+
+            <!-- Mobile Toggle Button -->
+            <button id="mobile-toggle" aria-label="Toggle Navigation" class="text-2xl text-stone-800 ml-1 p-1">☰</button>
+        </div>
     </div>
 
-    <!-- Mobile Menu (Now absolute-positioned to the right) -->
-<div id="mobile-menu" class="hidden md:hidden absolute top-[72px] right-6 bg-white border border-stone-200 rounded-xl shadow-xl p-4 flex-col gap-3 text-right z-50 w-48">
-    <a href="/" class="block text-stone-700 font-medium py-1">Home</a>
-    <a href="/pages/destination.html" class="block text-stone-700 font-medium py-1">Destinations</a>
-    <a href="/pages/experience.html" class="block text-stone-700 font-medium py-1">Experiences</a>
-    <a href="/pages/packages.html" class="block text-stone-700 font-medium py-1">Packages</a>
-    <a href="/pages/gallery.html" class="block text-stone-700 font-medium py-1">Gallery</a>
-    <a href="/pages/contact_us.html" class="block text-stone-700 font-medium py-1">Contact</a>  
-    <a href="/pages/about_us.html" class="block text-stone-700 font-medium py-1">About Us</a>
-    <a href="#booking-section" class="block bg-amber-800 text-white py-2 rounded-lg text-center font-bold mt-2">Book Now</a>
-</div>
-</nav>
-
-<script>
-    const toggle = document.getElementById('mobile-toggle');
-    const menu = document.getElementById('mobile-menu');
-
-    toggle.addEventListener('click', () => {
-        // Toggle the 'hidden' class to show/hide the menu
-        menu.classList.toggle('hidden');
-        menu.classList.toggle('flex');
-    });
-</script>
+    <!-- Mobile Menu Drawer -->
+    <div id="mobile-menu" class="hidden md:hidden absolute top-[68px] right-4 bg-white border border-stone-200 rounded-xl shadow-xl p-4 flex-col gap-2 text-right z-50 w-52">
+        <a href="/" class="block text-stone-700 font-medium py-1.5 hover:text-amber-900">Home</a>
+        <a href="/pages/destination.html" class="block text-stone-700 font-medium py-1.5 hover:text-amber-900">Destinations</a>
+        <a href="/pages/experience.html" class="block text-stone-700 font-medium py-1.5 hover:text-amber-900">Experiences</a>
+        <a href="/pages/packages.html" class="block text-stone-700 font-medium py-1.5 hover:text-amber-900">Packages</a>
+        <a href="/pages/gallery.html" class="block text-stone-700 font-medium py-1.5 hover:text-amber-900">Gallery</a>
+        <a href="/pages/contact_us.html" class="block text-stone-700 font-medium py-1.5 hover:text-amber-900">Contact</a>  
+        <a href="/pages/about_us.html" class="block text-stone-700 font-medium py-1.5 hover:text-amber-900">About Us</a>
+        
+        <a href="#booking-section" class="block bg-amber-800 text-white py-2 rounded-lg text-center
