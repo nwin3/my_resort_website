@@ -15,7 +15,7 @@
       "image": "https://yourdomain.com/assets/logo.png",
       "@id": "https://yourdomain.com",
       "url": "https://yourdomain1.com",
-      "telephone": "+919999999999",
+      "telephone": "+919358872644",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Sam Sand Dunes",
@@ -45,26 +45,12 @@
 <body class="bg-stone-50 text-stone-800 font-sans pt-[70px]">
 
     <div id="nav-placeholder"></div>
-    <script src="/loader.js"></script>
 
     <!-- HERO SECTION -->
     <header class="relative w-full h-[350px] md:h-[550px] bg-stone-900 overflow-hidden">
         
-        <!-- COMMENTED OUT ORIGINAL VIDEO
-        <video 
-            autoplay 
-            loop 
-            muted 
-            playsinline 
-            poster="assets/watermark.png" 
-            class="absolute inset-0 w-full h-full object-cover z-0 brightness-110 contrast-110">
-            <source src="/assets/resort.mp4.mp4" type="video/mp4" fetchpriority="high">
-        </video>
-        -->
-
         <!-- Round-Robin Image Carousel Component -->
         <div id="hero-slider" class="relative w-full h-full">
-            <!-- First slide has opacity-100 so it renders immediately before JS execution -->
             <img src="/assets/bedroom.png" alt="Luxury Tents Interior" class="hero-slide absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out opacity-100">
             <img src="/assets/room_out.jpg" alt="Sam Sand Dunes" class="hero-slide absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out opacity-0">
             <img src="/assets/seating.png" alt="Sam Sand Dunes" class="hero-slide absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out opacity-0">
@@ -73,14 +59,13 @@
             <img src="/assets/dunes.jpeg" alt="Sam Sand Dunes" class="hero-slide absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out opacity-0">
         </div>
 
-        <!-- Contrast overlay for readability and styling -->
         <div class="absolute inset-0 bg-black/30 z-10 pointer-events-none"></div>
 
         <!-- Manual Navigation Arrows -->
-        <button onclick="prevHeroSlide()" class="absolute left-4 top-1/2 -translate-y-1/2 z-20 text-white/70 hover:text-white bg-black/30 hover:bg-black/50 w-10 h-10 rounded-full flex items-center justify-center transition">
+        <button onclick="prevHeroSlide()" aria-label="Previous Slide" class="absolute left-4 top-1/2 -translate-y-1/2 z-20 text-white/70 hover:text-white bg-black/30 hover:bg-black/50 w-10 h-10 rounded-full flex items-center justify-center transition">
             <i class="fa-solid fa-chevron-left"></i>
         </button>
-        <button onclick="nextHeroSlide()" class="absolute right-4 top-1/2 -translate-y-1/2 z-20 text-white/70 hover:text-white bg-black/30 hover:bg-black/50 w-10 h-10 rounded-full flex items-center justify-center transition">
+        <button onclick="nextHeroSlide()" aria-label="Next Slide" class="absolute right-4 top-1/2 -translate-y-1/2 z-20 text-white/70 hover:text-white bg-black/30 hover:bg-black/50 w-10 h-10 rounded-full flex items-center justify-center transition">
             <i class="fa-solid fa-chevron-right"></i>
         </button>
 
@@ -95,7 +80,6 @@
         let currentHeroIndex = 0;
         let slideTimer;
 
-        // Build navigation dots dynamically
         heroSlides.forEach((_, i) => {
             const dot = document.createElement('button');
             dot.className = `w-2.5 h-2.5 rounded-full transition-all ${i === 0 ? 'bg-amber-400 w-6' : 'bg-white/60'}`;
@@ -109,7 +93,6 @@
                 slide.classList.toggle('opacity-0', i !== index);
             });
 
-            // Update dot styles
             Array.from(dotsContainer.children).forEach((dot, i) => {
                 if (i === index) {
                     dot.className = 'w-6 h-2.5 rounded-full bg-amber-400 transition-all';
@@ -139,17 +122,14 @@
 
         function resetSlideTimer() {
             clearInterval(slideTimer);
-            slideTimer = setInterval(nextHeroSlide, 4500); // Transitions every 4.5 seconds
+            slideTimer = setInterval(nextHeroSlide, 4500);
         }
 
-        // Display first slide immediately on page load
         showSlide(0);
-
-        // Initialize auto round-robin loop
         resetSlideTimer();
     </script>
 
-    <!-- FEATURES SECTION -->
+    <!-- FEATURES / AMENITIES HIGHLIGHTS -->
     <section class="py-12 bg-white">
         <div class="max-w-6xl mx-auto px-6">
             <h1 class="text-3xl md:text-4xl font-serif text-amber-900 text-center mb-6">Luxury Desert Camp & Resort in Jaisalmer</h1>
@@ -183,22 +163,21 @@
         </div>
     </section>
 
-    <!-- ACCOMMODATION SECTION (CENTERED) -->
+    <!-- ACCOMMODATION SECTION -->
     <section class="py-16 px-6 bg-stone-100">
         <div class="max-w-6xl mx-auto">
             <h2 class="text-3xl md:text-4xl font-serif text-center text-stone-900 mb-12">
                 Our Luxury Tents & Cottages
             </h2>
 
-            <!-- Centered Flex Wrapper -->
             <div class="flex justify-center">
                 <div class="w-full max-w-sm md:max-w-md bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300">
-                    <img src="./assets/bedroom.png" alt="Family Suite" class="w-full h-64 object-cover">
+                    <img src="/assets/bedroom.png" alt="Family Suite" class="w-full h-64 object-cover">
                     <div class="p-6">
                         <h3 class="text-xl font-bold text-amber-900 mb-2">Family Desert Suite</h3>
                         <p class="text-stone-600 text-sm mb-4">Spacious living for families, featuring panoramic views of the sand dunes.</p>
                         <a 
-                            href="pages/family_desert_suite.html" 
+                            href="/pages/family_desert_suite.html" 
                             class="inline-block bg-amber-900 text-white px-4 py-2 rounded hover:bg-amber-800 transition">
                             View Details
                         </a>
@@ -208,11 +187,116 @@
         </div>
     </section>
 
-    <!-- FOOTER -->
-    <footer class="bg-stone-900 text-stone-400 py-8 text-center text-sm">
-        <p>&copy; 2026 Desert Bloom Camp & Resort. All rights reserved.</p>
-    </footer>
+    <!-- EXPERIENCES & FACILITIES SECTION (MERGED FROM EXPERIENCE.HTML) -->
+    <section class="py-16 px-4 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-serif text-amber-900 text-center mb-4">Our Experiences & Facilities</h2>
+            <p class="text-stone-600 text-center max-w-2xl mx-auto mb-12">Immerse yourself in authentic Rajasthani heritage, golden sand adventures, and desert luxury.</p>
 
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                <!-- 1. Desert Camps -->
+                <div class="bg-stone-50 rounded-xl shadow-lg overflow-hidden border-b-4 border-amber-800 hover:shadow-xl transition-shadow">
+                    <img src="/assets/room_out.jpg" alt="Luxury Tents" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-serif text-amber-900 mb-3">Desert Camps</h3>
+                        <p class="text-stone-600">Experience authentic desert living in our hand-crafted luxury tents, equipped with modern en-suite bathrooms and private sit-outs.</p>
+                    </div>
+                </div>
+
+                <!-- 2. Live Folk & Bonfire -->
+                <div class="bg-stone-50 rounded-xl shadow-lg overflow-hidden border-b-4 border-amber-800 hover:shadow-xl transition-shadow">
+                    <img src="/assets/bonfire.jpeg" alt="Folk Music and Kalbeliya Dance" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-serif text-amber-900 mb-3">Folk Nights & Bonfire</h3>
+                        <p class="text-stone-600">Gather around a crackling campfire as authentic Manganiyar vocalists and spirited Kalbeliya dancers bring ancient Thar folk legends to life under the desert stars.</p>
+                    </div>
+                </div>
+
+                <!-- 3. Stargazing Experience -->
+                <div class="bg-stone-50 rounded-xl shadow-lg overflow-hidden border-b-4 border-amber-800 hover:shadow-xl transition-shadow">
+                    <div class="relative">
+                        <img src="/assets/telescope.jpeg" alt="Desert Stargazing" class="w-full h-64 object-cover">
+                        <span class="absolute top-4 right-4 bg-amber-900/90 text-amber-100 text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider backdrop-blur-sm">
+                            Prior Booking Only
+                        </span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-serif text-amber-900 mb-3">Telescope Stargazing</h3>
+                        <p class="text-stone-600 mb-4">Marvel at unpolluted desert skies with guided high-powered telescope sessions, spotting deep-sky constellations, planets, and the glowing sweep of the Milky Way.</p>
+                        <div class="pt-3 border-t border-amber-200 flex items-center text-xs font-medium text-amber-800">
+                            <svg class="w-4 h-4 mr-1.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                            Requires prior confirmation before booking
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. Jeep Safari -->
+                <div class="bg-stone-50 rounded-xl shadow-lg overflow-hidden border-b-4 border-amber-800 hover:shadow-xl transition-shadow">
+                    <img src="/assets/jeep_safari.jpeg" alt="Desert Jeep Safari" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-serif text-amber-900 mb-3">Jeep Safari</h3>
+                        <p class="text-stone-600">Conquer the rolling golden crests on an exhilarating 4x4 expedition, carving through untouched desert trails into the heart of the Thar wilderness.</p>
+                    </div>
+                </div>
+
+                <!-- 5. Camel Safari -->
+                <div class="bg-stone-50 rounded-xl shadow-lg overflow-hidden border-b-4 border-amber-800 hover:shadow-xl transition-shadow">
+                    <img src="/assets/camel_safari.jpeg" alt="Desert Camel Safari" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-serif text-amber-900 mb-3">Camel Safari</h3>
+                        <p class="text-stone-600">Embark on a timeless desert journey atop majestic camels, traversing the undulating golden dunes as the setting sun paints the vast Thar horizon.</p>
+                    </div>
+                </div>
+
+                <!-- 6. Quad Biking -->
+                <div class="bg-stone-50 rounded-xl shadow-lg overflow-hidden border-b-4 border-amber-800 hover:shadow-xl transition-shadow">
+                    <img src="/assets/quad_bike.jpeg" alt="ATV Quad Biking on Dunes" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-serif text-amber-900 mb-3">ATV Quad Biking</h3>
+                        <p class="text-stone-600">Take the throttle into your own hands. Power through undulating dunes and rugged sandy tracks on an action-packed 4-wheel all-terrain bike tour.</p>
+                    </div>
+                </div>
+
+                <!-- 7. Paramotoring -->
+                <div class="bg-stone-50 rounded-xl shadow-lg overflow-hidden border-b-4 border-amber-800 hover:shadow-xl transition-shadow">
+                    <img src="/assets/paramotor.jpeg" alt="Paramotoring over Desert Dunes" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-serif text-amber-900 mb-3">Desert Paramotoring</h3>
+                        <p class="text-stone-600">Soar high above the golden ridges with a certified pilot for a thrilling bird’s-eye panorama of the vast desert ripple patterns and distant horizon.</p>
+                    </div>
+                </div>
+
+                <!-- 8. Dune Dining -->
+                <div class="bg-stone-50 rounded-xl shadow-lg overflow-hidden border-b-4 border-amber-800 hover:shadow-xl transition-shadow">
+                    <div class="relative">
+                        <img src="/assets/dune_dining.jpeg" alt="Dune Dining Experience" class="w-full h-64 object-cover">
+                        <span class="absolute top-4 right-4 bg-amber-900/90 text-amber-100 text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider backdrop-blur-sm">
+                            Prior Booking Only
+                        </span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-serif text-amber-900 mb-3">Dune Dining</h3>
+                        <p class="text-stone-600 mb-4">Savor freshly prepared breakfast at dawn, a relaxed desert lunch, or a candlelit dinner under a canopy of stars right amidst the open dunes.</p>
+                        <div class="pt-3 border-t border-amber-200 flex items-center text-xs font-medium text-amber-800">
+                            <svg class="w-4 h-4 mr-1.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                            Requires prior confirmation before booking
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER PLACEHOLDER -->
     <div id="footer-placeholder"></div>
+
+    <!-- LOADER SCRIPT (Loaded at the end of body) -->
+    <script src="/loader.js"></script>
 </body>
 </html>
