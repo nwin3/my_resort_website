@@ -1,21 +1,38 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const navPlaceholder = document.getElementById("nav-placeholder");
-
-    if (navPlaceholder) {
-        // Adjust path if your navbar.html lives inside /pages/ or root
-        const navPath = window.location.pathname.includes("/pages/") ? "../navbar.html" : "/navbar.html";
-
-        fetch(navPath)
-            .then(res => res.text())
-            .then(html => {
-                navPlaceholder.innerHTML = html;
-                initNavbarEvents(); // Initialize listeners AFTER insertion
-            })
-            .catch(err => console.error("Error loading navbar:", err));
-    }
-
-    // Similar logic for footer if present...
+    loadNavbar();
 });
+
+function loadNavbar() {
+    const navPlaceholder = document.getElementById("nav-placeholder");
+    if (!navPlaceholder) return;
+
+    // If already inside /pages/, fetch directly. Otherwise, step into pages/
+    const isInsidePages = window.location.pathname.includes("/pages/");
+    const targetPath = isInsidePages ? "navbar.html" : "pages/navbar.html";
+
+    fetch(targetPath)
+        .then(response => {
+            if (!response.ok) {
+                // Secondary fallback in case of local file server quirks
+                const fallback = isInsidePages ? "./navbar.html" : "./pages/navbar.html";
+                return fetch(fallback);
+            }
+            return response;
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`Failed to load ${targetPath} (HTTP ${response.status})`);
+            }
+            return response.text();
+        })
+        .then(html => {
+            navPlaceholder.innerHTML = html;
+            initNavbarEvents(); // Bind popup & menu click handlers
+        })
+        .catch(err => {
+            console.error("Navbar loading error:", err);
+        });
+}
 
 function initNavbarEvents() {
     const toggle = document.getElementById('mobile-toggle');
@@ -24,7 +41,7 @@ function initNavbarEvents() {
     const closeBtn = document.getElementById('close-modal-btn');
     const bookButtons = document.querySelectorAll('.book-now-btn');
 
-    // Mobile Hamburger
+    // Toggle Mobile Drawer
     if (toggle && menu) {
         toggle.addEventListener('click', () => {
             menu.classList.toggle('hidden');
@@ -32,7 +49,7 @@ function initNavbarEvents() {
         });
     }
 
-    // Open Modal
+    // Open Booking Notice Modal
     bookButtons.forEach(btn => {
         btn.addEventListener('click', (e) => {
             e.preventDefault();
@@ -47,7 +64,7 @@ function initNavbarEvents() {
         });
     });
 
-    // Close Modal Button
+    // Close Modal Button (X)
     if (closeBtn && modal) {
         closeBtn.addEventListener('click', () => {
             modal.classList.add('hidden');
