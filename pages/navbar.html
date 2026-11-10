@@ -10,8 +10,6 @@
             <a href="/" class="hover:text-amber-900 transition">Home</a>
             <a href="/pages/destination.html" class="hover:text-amber-900 transition">Destinations</a>
             <a href="/pages/experience.html" class="hover:text-amber-900 transition">Experiences</a>
-            <!--<a href="/pages/packages.html" class="hover:text-amber-900 transition">Packages</a>-->
-            
             <a href="/pages/pricing.html" class="hover:text-amber-900 transition">Pricing</a>
             <a href="/pages/gallery.html" class="hover:text-amber-900 transition">Gallery</a>
             <a href="/pages/contact_us.html" class="hover:text-amber-900 transition">Contact</a>
@@ -19,7 +17,7 @@
 
             <!-- Quick Contact Icons (Desktop) -->
             <div class="flex items-center gap-1.5 border-l border-stone-300 pl-3">
-                <!-- WhatsApp with Automated Booking Inquiry -->
+                <!-- WhatsApp -->
                 <a href="https://wa.me/919772007882?text=Hello%20Desert%20Bloom%20Camp%20%26%20Resort%2C%20I%20would%20like%20to%20inquire%20about%20booking%20a%20stay%20%2F%20desert%20safari.%20Please%20share%20details%20and%20availability." target="_blank" rel="noopener noreferrer" 
                    aria-label="Chat on WhatsApp"
                    class="w-8 h-8 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white flex items-center justify-center transition shadow-sm">
@@ -48,11 +46,10 @@
                 </a>
             </div>
             
-            <!-- Book Now Direct Link -->
-            <a href="https://desertbloomcampandresort.bookingjini.in/" target="_blank" rel="noopener noreferrer" 
-               class="bg-amber-800 text-white px-4 py-2 rounded-lg hover:bg-amber-900 transition shadow-md whitespace-nowrap font-medium inline-block text-center">
+            <!-- Book Now Modal Trigger -->
+            <button type="button" class="book-now-btn bg-amber-800 text-white px-4 py-2 rounded-lg hover:bg-amber-900 transition shadow-md whitespace-nowrap font-medium cursor-pointer">
                 Book Now
-            </a>
+            </button>
         </div>
 
         <!-- Mobile Header Actions (Visible on small screens) -->
@@ -100,9 +97,69 @@
         <a href="/pages/contact_us.html" class="block text-stone-700 font-medium py-1.5 hover:text-amber-900">Contact</a>  
         <a href="/pages/about_us.html" class="block text-stone-700 font-medium py-1.5 hover:text-amber-900">About Us</a>
         
-        <a href="https://desertbloomcampandresort.bookingjini.in/" target="_blank" rel="noopener noreferrer" 
-           class="block w-full bg-amber-800 text-white py-2 rounded-lg text-center font-bold mt-2 shadow-sm hover:bg-amber-900 transition">
+        <button type="button" class="book-now-btn block w-full bg-amber-800 text-white py-2 rounded-lg text-center font-bold mt-2 shadow-sm cursor-pointer hover:bg-amber-900 transition">
             Book Now
-        </a>
+        </button>
     </div>
 </nav>
+
+<!-- BOOKING METHOD POPUP MODAL -->
+<div id="booking-modal" class="fixed inset-0 z-[100] bg-black/60 backdrop-blur-sm hidden items-center justify-center px-4">
+    <div class="bg-white rounded-2xl max-w-lg w-full p-6 sm:p-7 text-center shadow-2xl relative border border-stone-200">
+        <!-- Close Button -->
+        <button id="close-modal-btn" type="button" class="absolute top-4 right-4 text-stone-400 hover:text-stone-700 text-xl font-bold w-8 h-8 rounded-full flex items-center justify-center transition">
+            ✕
+        </button>
+
+        <!-- Header -->
+        <div class="w-14 h-14 bg-amber-100 text-amber-800 rounded-full flex items-center justify-center mx-auto mb-3 text-2xl">
+            <i class="fa-solid fa-calendar-check"></i>
+        </div>
+        <h3 class="font-serif text-2xl text-amber-900 font-bold mb-1">Choose How to Book</h3>
+        <p class="text-stone-600 text-sm mb-6">Select your preferred reservation option below</p>
+
+        <!-- Booking Options -->
+        <div class="space-y-3.5 text-left">
+            <!-- Option 1: WhatsApp (Best Rate Guarantee) -->
+            <a href="https://wa.me/919772007882?text=Hello%20Desert%20Bloom%20Camp%20%26%20Resort%2C%20I%20would%20like%20to%20inquire%20about%20booking%20a%20stay%20%2F%20desert%20safari.%20Please%20share%20the%20best%20available%20rates." 
+               target="_blank" rel="noopener noreferrer"
+               class="group block p-4 rounded-xl border-2 border-emerald-500 bg-emerald-50/40 hover:bg-emerald-50 transition relative">
+                <span class="absolute -top-2.5 right-4 bg-emerald-600 text-white text-[11px] font-semibold px-2 py-0.5 rounded-full uppercase tracking-wider shadow-sm">
+                    Lowest Rates • 0% Commission
+                </span>
+                <div class="flex items-center gap-3.5">
+                    <div class="w-10 h-10 rounded-full bg-emerald-600 text-white flex items-center justify-center text-xl flex-shrink-0">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </div>
+                    <div class="flex-1">
+                        <div class="font-bold text-stone-900 group-hover:text-emerald-800 text-base">
+                            Direct Booking via WhatsApp
+                        </div>
+                        <p class="text-xs text-stone-600 mt-0.5">
+                            Generally cheaper rates with zero platform fees or intermediary commissions.
+                        </p>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Option 2: Online Booking Engine -->
+            <a href="https://desertbloomcampandresort.bookingjini.in/" 
+               target="_blank" rel="noopener noreferrer"
+               class="group block p-4 rounded-xl border border-stone-200 hover:border-amber-700 hover:bg-stone-50 transition">
+                <div class="flex items-center gap-3.5">
+                    <div class="w-10 h-10 rounded-full bg-amber-800 text-white flex items-center justify-center text-lg flex-shrink-0">
+                        <i class="fa-solid fa-credit-card"></i>
+                    </div>
+                    <div class="flex-1">
+                        <div class="font-bold text-stone-900 group-hover:text-amber-900 text-base">
+                            Instant Online Reservation
+                        </div>
+                        <p class="text-xs text-stone-500 mt-0.5">
+                            Book instantly online via credit card, debit card, or net banking.
+                        </p>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
