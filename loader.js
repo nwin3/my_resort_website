@@ -3,6 +3,35 @@ document.addEventListener("DOMContentLoaded", () => {
     loadFooter();
 });
 
+// Global functions attached directly to window
+window.openBookingModal = function() {
+    const modal = document.getElementById("booking-modal");
+    if (modal) {
+        modal.style.setProperty("display", "flex", "important");
+    }
+    const menu = document.getElementById("mobile-menu");
+    if (menu) {
+        menu.classList.add("hidden");
+        menu.classList.remove("flex");
+    }
+};
+
+window.closeBookingModal = function() {
+    const modal = document.getElementById("booking-modal");
+    if (modal) {
+        modal.style.setProperty("display", "none", "important");
+    }
+};
+
+// Global click delegation for all .book-now-btn elements (including buttons in hero/body)
+document.addEventListener("click", (e) => {
+    const btn = e.target.closest(".book-now-btn");
+    if (btn) {
+        e.preventDefault();
+        window.openBookingModal();
+    }
+});
+
 // Load Navbar
 function loadNavbar() {
     const navPlaceholder = document.getElementById("nav-placeholder");
@@ -24,7 +53,7 @@ function loadNavbar() {
         })
         .then(html => {
             navPlaceholder.innerHTML = html;
-            initNavbarEvents();
+            initMobileToggle();
         })
         .catch(err => console.error("Navbar loading error:", err));
 }
@@ -54,52 +83,15 @@ function loadFooter() {
         .catch(err => console.error("Footer loading error:", err));
 }
 
-// Navbar & Modal Event Listeners
-function initNavbarEvents() {
-    const toggle = document.getElementById('mobile-toggle');
-    const menu = document.getElementById('mobile-menu');
-    const modal = document.getElementById('booking-modal');
-    const closeBtn = document.getElementById('close-modal-btn');
-    const bookButtons = document.querySelectorAll('.book-now-btn');
+// Mobile toggle setup
+function initMobileToggle() {
+    const toggle = document.getElementById("mobile-toggle");
+    const menu = document.getElementById("mobile-menu");
 
-    // Mobile menu toggle
     if (toggle && menu) {
-        toggle.addEventListener('click', () => {
-            menu.classList.toggle('hidden');
-            menu.classList.toggle('flex');
-        });
-    }
-
-    // Open booking modal
-    bookButtons.forEach(btn => {
-        btn.addEventListener('click', (e) => {
-            e.preventDefault();
-            if (modal) {
-                modal.classList.remove('hidden');
-                modal.classList.add('flex');
-            }
-            if (menu && !menu.classList.contains('hidden')) {
-                menu.classList.add('hidden');
-                menu.classList.remove('flex');
-            }
-        });
-    });
-
-    // Close button
-    if (closeBtn && modal) {
-        closeBtn.addEventListener('click', () => {
-            modal.classList.add('hidden');
-            modal.classList.remove('flex');
-        });
-    }
-
-    // Close on outside overlay click
-    if (modal) {
-        modal.addEventListener('click', (e) => {
-            if (e.target === modal) {
-                modal.classList.add('hidden');
-                modal.classList.remove('flex');
-            }
+        toggle.addEventListener("click", () => {
+            menu.classList.toggle("hidden");
+            menu.classList.toggle("flex");
         });
     }
 }
