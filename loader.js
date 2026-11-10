@@ -8,14 +8,12 @@ function loadNavbar() {
     const navPlaceholder = document.getElementById("nav-placeholder");
     if (!navPlaceholder) return;
 
-    // Use absolute path from domain root, with relative fallback for local subfolders
     const isInsidePages = window.location.pathname.includes("/pages/");
     const targetPath = isInsidePages ? "./navbar.html" : "./pages/navbar.html";
 
     fetch(targetPath)
         .then(response => {
             if (!response.ok) {
-                // Secondary fallback attempt via absolute root
                 return fetch("/pages/navbar.html");
             }
             return response;
@@ -56,15 +54,52 @@ function loadFooter() {
         .catch(err => console.error("Footer loading error:", err));
 }
 
-// Mobile toggle only (Modal code removed since Book Now links directly)
+// Navbar & Modal Event Listeners
 function initNavbarEvents() {
     const toggle = document.getElementById('mobile-toggle');
     const menu = document.getElementById('mobile-menu');
+    const modal = document.getElementById('booking-modal');
+    const closeBtn = document.getElementById('close-modal-btn');
+    const bookButtons = document.querySelectorAll('.book-now-btn');
 
+    // Mobile menu toggle
     if (toggle && menu) {
         toggle.addEventListener('click', () => {
             menu.classList.toggle('hidden');
             menu.classList.toggle('flex');
+        });
+    }
+
+    // Open booking modal
+    bookButtons.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            if (modal) {
+                modal.classList.remove('hidden');
+                modal.classList.add('flex');
+            }
+            if (menu && !menu.classList.contains('hidden')) {
+                menu.classList.add('hidden');
+                menu.classList.remove('flex');
+            }
+        });
+    });
+
+    // Close button
+    if (closeBtn && modal) {
+        closeBtn.addEventListener('click', () => {
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        });
+    }
+
+    // Close on outside overlay click
+    if (modal) {
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.classList.add('hidden');
+                modal.classList.remove('flex');
+            }
         });
     }
 }
