@@ -6,7 +6,6 @@
     <title>Gallery | Desert Bloom Resort</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
 </head>
 <body class="bg-stone-50 text-stone-800">
 
@@ -14,72 +13,155 @@
     <div id="nav-placeholder"></div>
     <script src="../loader.js"></script>
 
-    <!-- Update your main container class -->
-<!-- Use this container structure -->
-<!-- We use 'w-full' to ensure the main container takes the full width -->
-<main class="w-full">
-    <div class="px-4 py-16">
-        <h1 class="text-4xl font-serif text-amber-900 text-center mb-12"></h1>
+    <main class="w-full">
+        <div class="px-4 py-16">
+            <h1 class="text-4xl font-serif text-amber-900 text-center mb-12">Our Gallery</h1>
+        </div>
+
+        <!-- Gallery Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-4 pb-16 max-w-7xl mx-auto">
+
+            <div class="gallery-item group relative overflow-hidden rounded-xl shadow-lg bg-stone-900 cursor-pointer transition-all duration-300 hover:scale-[1.03] hover:shadow-2xl hover:z-20">
+                <img src="../assets/room.jpg" alt="Premium Mud Cottage" class="w-full h-80 object-cover group-hover:scale-110 transition duration-500">
+                <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                    <span class="text-white text-sm tracking-wide bg-amber-900/80 px-3 py-1.5 rounded-full"><i class="fa-solid fa-expand mr-1.5"></i>View Full</span>
+                </div>
+            </div>
+
+            <div class="gallery-item group relative overflow-hidden rounded-xl shadow-lg bg-stone-900 cursor-pointer transition-all duration-300 hover:scale-[1.03] hover:shadow-2xl hover:z-20">
+                <img src="../assets/room2.jpg" alt="Premium Mud Cottage" class="w-full h-80 object-cover group-hover:scale-110 transition duration-500">
+                <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                    <span class="text-white text-sm tracking-wide bg-amber-900/80 px-3 py-1.5 rounded-full"><i class="fa-solid fa-expand mr-1.5"></i>View Full</span>
+                </div>
+            </div>
+
+            <div class="gallery-item group relative overflow-hidden rounded-xl shadow-lg bg-stone-900 cursor-pointer transition-all duration-300 hover:scale-[1.03] hover:shadow-2xl hover:z-20">
+                <img src="../assets/outyard2.jpg" alt="Premium Mud Cottage" class="w-full h-80 object-cover group-hover:scale-110 transition duration-500">
+                <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                    <span class="text-white text-sm tracking-wide bg-amber-900/80 px-3 py-1.5 rounded-full"><i class="fa-solid fa-expand mr-1.5"></i>View Full</span>
+                </div>
+            </div>
+
+            <div class="gallery-item group relative overflow-hidden rounded-xl shadow-lg bg-stone-900 cursor-pointer transition-all duration-300 hover:scale-[1.03] hover:shadow-2xl hover:z-20">
+                <img src="../assets/outyard3.jpg" alt="Premium Mud Cottage" class="w-full h-80 object-cover group-hover:scale-110 transition duration-500">
+                <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                    <span class="text-white text-sm tracking-wide bg-amber-900/80 px-3 py-1.5 rounded-full"><i class="fa-solid fa-expand mr-1.5"></i>View Full</span>
+                </div>
+            </div>
+
+            <div class="gallery-item group relative overflow-hidden rounded-xl shadow-lg bg-stone-900 cursor-pointer transition-all duration-300 hover:scale-[1.03] hover:shadow-2xl hover:z-20">
+                <img src="../assets/dance.png" alt="Cultural Dance" class="w-full h-80 object-cover group-hover:scale-110 transition duration-500">
+                <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                    <span class="text-white text-sm tracking-wide bg-amber-900/80 px-3 py-1.5 rounded-full"><i class="fa-solid fa-expand mr-1.5"></i>View Full</span>
+                </div>
+            </div>
+
+            <div class="gallery-item group relative overflow-hidden rounded-xl shadow-lg bg-stone-900 cursor-pointer transition-all duration-300 hover:scale-[1.03] hover:shadow-2xl hover:z-20">
+                <img src="../assets/outyard.jpg" alt="Resort Courtyard" class="w-full h-80 object-cover group-hover:scale-110 transition duration-500">
+                <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                    <span class="text-white text-sm tracking-wide bg-amber-900/80 px-3 py-1.5 rounded-full"><i class="fa-solid fa-expand mr-1.5"></i>View Full</span>
+                </div>
+            </div>
+
+            <div class="gallery-item group relative overflow-hidden rounded-xl shadow-lg bg-stone-900 cursor-pointer transition-all duration-300 hover:scale-[1.03] hover:shadow-2xl hover:z-20">
+                <img src="../assets/dj_floor.jpeg" alt="Family Desert Suite" class="w-full h-80 object-cover group-hover:scale-110 transition duration-500">
+                <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                    <span class="text-white text-sm tracking-wide bg-amber-900/80 px-3 py-1.5 rounded-full"><i class="fa-solid fa-expand mr-1.5"></i>View Full</span>
+                </div>
+            </div>
+
+            <div class="gallery-item group relative overflow-hidden rounded-xl shadow-lg bg-stone-900 cursor-pointer transition-all duration-300 hover:scale-[1.03] hover:shadow-2xl hover:z-20">
+                <img src="../assets/dj_floor2.jpeg" alt="DJ Night Stage" class="w-full h-80 object-cover group-hover:scale-110 transition duration-500">
+                <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                    <span class="text-white text-sm tracking-wide bg-amber-900/80 px-3 py-1.5 rounded-full"><i class="fa-solid fa-expand mr-1.5"></i>View Full</span>
+                </div>
+            </div>
+
+            <div class="gallery-item group relative overflow-hidden rounded-xl shadow-lg bg-stone-900 cursor-pointer transition-all duration-300 hover:scale-[1.03] hover:shadow-2xl hover:z-20">
+                <img src="../assets/board.jpeg" alt="Welcome Sign" class="w-full h-80 object-cover group-hover:scale-110 transition duration-500">
+                <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                    <span class="text-white text-sm tracking-wide bg-amber-900/80 px-3 py-1.5 rounded-full"><i class="fa-solid fa-expand mr-1.5"></i>View Full</span>
+                </div>
+            </div>
+
+            <div class="gallery-item group relative overflow-hidden rounded-xl shadow-lg bg-stone-900 cursor-pointer transition-all duration-300 hover:scale-[1.03] hover:shadow-2xl hover:z-20">
+                <img src="../assets/bedroom.png" alt="Royal Swiss Tents" class="w-full h-80 object-cover group-hover:scale-110 transition duration-500">
+                <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                    <span class="text-white text-sm tracking-wide bg-amber-900/80 px-3 py-1.5 rounded-full"><i class="fa-solid fa-expand mr-1.5"></i>View Full</span>
+                </div>
+            </div>
+
+            <div class="gallery-item group relative overflow-hidden rounded-xl shadow-lg bg-stone-900 cursor-pointer transition-all duration-300 hover:scale-[1.03] hover:shadow-2xl hover:z-20">
+                <img src="../assets/bathroom.png" alt="Attached Washroom" class="w-full h-80 object-cover group-hover:scale-110 transition duration-500">
+                <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                    <span class="text-white text-sm tracking-wide bg-amber-900/80 px-3 py-1.5 rounded-full"><i class="fa-solid fa-expand mr-1.5"></i>View Full</span>
+                </div>
+            </div>
+
+            <div class="gallery-item group relative overflow-hidden rounded-xl shadow-lg bg-stone-900 cursor-pointer transition-all duration-300 hover:scale-[1.03] hover:shadow-2xl hover:z-20">
+                <img src="../assets/room_out.jpg" alt="Tent Exterior" class="w-full h-80 object-cover group-hover:scale-110 transition duration-500">
+                <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                    <span class="text-white text-sm tracking-wide bg-amber-900/80 px-3 py-1.5 rounded-full"><i class="fa-solid fa-expand mr-1.5"></i>View Full</span>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Full Image Modal (Lightbox) -->
+    <div id="imageModal" class="fixed inset-0 bg-black/90 z-50 hidden opacity-0 transition-opacity duration-300 flex flex-col items-center justify-center p-4">
+        <button id="closeModal" class="absolute top-6 right-6 text-white text-3xl hover:text-amber-400 transition" aria-label="Close modal">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        <div class="max-w-5xl max-h-[85vh] flex flex-col items-center">
+            <img id="modalImg" src="" alt="" class="max-w-full max-h-[75vh] object-contain rounded-lg shadow-2xl">
+            <p id="modalCaption" class="text-white text-lg font-serif mt-4 text-center"></p>
+        </div>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-4 pb-16">
-
-        <div class="overflow-hidden rounded-xl shadow-lg">
-            <img src="../assets/room.jpg" alt="Premium Mud Cottage" class="w-full h-80 object-cover hover:scale-105 transition duration-500">
-        </div>
-
-        <div class="overflow-hidden rounded-xl shadow-lg">
-            <img src="../assets/room2.jpg" alt="Premium Mud Cottage" class="w-full h-80 object-cover hover:scale-105 transition duration-500">
-        </div>
-
-        <div class="overflow-hidden rounded-xl shadow-lg">
-            <img src="../assets/outyard2.jpg" alt="Premium Mud Cottage" class="w-full h-80 object-cover hover:scale-105 transition duration-500">
-        </div>
-
-        <div class="overflow-hidden rounded-xl shadow-lg">
-            <img src="../assets/outyard3.jpg" alt="Premium Mud Cottage" class="w-full h-80 object-cover hover:scale-105 transition duration-500">
-        </div>
-
-        
-        <div class="overflow-hidden rounded-xl shadow-lg">
-            <img src="../assets/dance.png" alt="Premium Mud Cottage" class="w-full h-80 object-cover hover:scale-105 transition duration-500">
-        </div>
-
-        <div class="overflow-hidden rounded-xl shadow-lg">
-            <img src="../assets/outyard.jpg" alt="Premium Mud Cottage" class="w-full h-80 object-cover hover:scale-105 transition duration-500">
-        </div>
-        
-    
-        <div class="overflow-hidden rounded-xl shadow-lg">
-            <img src="../assets/dj_floor.jpeg" alt="Family Desert Suite" class="w-full h-80 object-cover hover:scale-105 transition duration-500">
-        </div>
-
-        <div class="overflow-hidden rounded-xl shadow-lg">
-            <img src="../assets/dj_floor2.jpeg" alt="Family Desert Suite" class="w-full h-80 object-cover hover:scale-105 transition duration-500">
-        </div>
-
-        <div class="overflow-hidden rounded-xl shadow-lg">
-            <img src="../assets/board.jpeg" alt="Royal Swiss Tents" class="w-full h-80 object-cover hover:scale-105 transition duration-500">
-        </div>
-
-        <div class="overflow-hidden rounded-xl shadow-lg">
-            <img src="../assets/bedroom.png" alt="Royal Swiss Tents" class="w-full h-80 object-cover hover:scale-105 transition duration-500">
-        </div>
-
-        <div class="overflow-hidden rounded-xl shadow-lg">
-            <img src="../assets/bathroom.png" alt="Royal Swiss Tents" class="w-full h-80 object-cover hover:scale-105 transition duration-500">
-        </div>
-
-        <div class="overflow-hidden rounded-xl shadow-lg">
-            <img src="../assets/room_out.jpg" alt="Royal Swiss Tents" class="w-full h-80 object-cover hover:scale-105 transition duration-500">
-        </div>
-
-    </div>
-</main>
-
-    
     <div id="footer-placeholder"></div>
     <script src="../loader.js"></script>
 
+    <!-- Modal Interactive Logic -->
+    <script>
+        const modal = document.getElementById('imageModal');
+        const modalImg = document.getElementById('modalImg');
+        const modalCaption = document.getElementById('modalCaption');
+        const closeModal = document.getElementById('closeModal');
+        const galleryItems = document.querySelectorAll('.gallery-item');
+
+        function openModal(imgSrc, imgAlt) {
+            modalImg.src = imgSrc;
+            modalCaption.textContent = imgAlt;
+            modal.classList.remove('hidden');
+            setTimeout(() => modal.classList.remove('opacity-0'), 10);
+            document.body.classList.add('overflow-hidden');
+        }
+
+        function hideModal() {
+            modal.classList.add('opacity-0');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+                modalImg.src = '';
+                document.body.classList.remove('overflow-hidden');
+            }, 300);
+        }
+
+        galleryItems.forEach(item => {
+            const img = item.querySelector('img');
+            item.addEventListener('click', () => openModal(img.src, img.alt));
+        });
+
+        closeModal.addEventListener('click', hideModal);
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) hideModal();
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+                hideModal();
+            }
+        });
+    </script>
 </body>
 </html>
