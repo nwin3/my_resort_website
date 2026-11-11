@@ -3,54 +3,153 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Desert Bloom | Luxury Desert Camping in Jaisalmer</title>
+    <title>Our Story & Promise | Desert Bloom Camp Jaisalmer</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        serif: ['Cinzel', 'serif'],
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    colors: {
+                        sand: {
+                            50: '#FBF9F5',
+                            100: '#F5EFEB',
+                            200: '#EADCCE',
+                            800: '#3D312A',
+                            900: '#261E1A'
+                        },
+                        amberGold: {
+                            500: '#D4A373',
+                            600: '#C58F58',
+                            700: '#9B6B38'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
 </head>
-<body class="bg-stone-50 text-stone-800 font-sans">
+<body class="bg-sand-50 text-sand-800 font-sans antialiased selection:bg-amberGold-500 selection:text-white">
 
+    <!-- NAVIGATION PLACEHOLDER -->
     <div id="nav-placeholder"></div>
     <script src="../loader.js"></script>
 
-    <!-- Hero Header: Added pt-32 md:pt-40 to clear the fixed/sticky navbar -->
-    <section class="pt-32 md:pt-40 pb-20 px-6 text-center bg-stone-900 text-white">
-        <h1 class="text-4xl md:text-5xl font-serif text-amber-500 mb-4">Our Story</h1>
-        <p class="max-w-2xl mx-auto text-lg text-stone-300">Born in the golden sands of Jaisalmer, crafted for your comfort.</p>
+    <!-- HERO HEADER -->
+    <section class="relative pt-36 md:pt-48 pb-24 px-6 text-center bg-sand-900 text-white overflow-hidden">
+        <div class="absolute inset-0 opacity-20 bg-[radial-gradient(#D4A373_1px,transparent_1px)] [background-size:16px_16px]"></div>
+        
+        <div class="relative max-w-3xl mx-auto z-10">
+            <span class="inline-block uppercase tracking-widest text-xs md:text-sm text-amberGold-500 font-semibold mb-3">Authentic Jaisalmer Hospitality</span>
+            <h1 class="text-4xl md:text-6xl font-serif text-white tracking-wide mb-6">The Thar, Without Compromise</h1>
+            <p class="text-lg md:text-xl text-stone-300 font-light leading-relaxed max-w-2xl mx-auto">
+                Born in the golden stillness of the Sam Sand Dunes—engineered for deep peace of mind, genuine warmth, and effortless comfort.
+            </p>
+        </div>
     </section>
 
-   <section class="py-16 px-6 max-w-4xl mx-auto leading-relaxed text-lg">
-    <h2 class="text-3xl font-serif text-amber-900 mb-6">Our Story: Precision Meets Passion</h2>
-    
-    <p class="mb-6">
-        Desert Bloom was born from a unique intersection of two worlds: the high-tech precision of <strong>Google Pixel mobile development</strong> and the timeless, soulful art of <strong>Rajasthani hospitality</strong>. 
-    </p>
+    <!-- MAIN STORY SECTION -->
+    <main class="py-20 px-6 max-w-4xl mx-auto text-lg leading-relaxed text-stone-700">
 
-    <p class="mb-6">
-        As a developer, my professional life is dedicated to creating seamless, intuitive experiences for millions of users. However, my dream has always been to create something more tactile and personal—a space where I could bring that same commitment to quality to the way we host people. I founded Desert Bloom to prove that luxury desert camping in Jaisalmer can be just as thoughtfully engineered as it is beautiful.
-    </p>
-
-    <!-- GALLERY SECTION -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 py-8">
-        <div class="h-64 overflow-hidden rounded-lg shadow-md">
-            <img src="/assets/staff.png" alt="Luxury desert camp in Jaisalmer" class="w-full h-full object-cover">
+        <!-- INTRO HOOK -->
+        <div class="mb-14">
+            <h2 class="text-2xl md:text-3xl font-serif text-amberGold-700 mb-6">A Sanctuary Built for Peace of Mind</h2>
+            <p class="mb-6">
+                Everyone dreams of spending a starlit night in the heart of the Thar Desert. Yet, for many travelers, that dream comes paired with quiet reservations: <em>Will the tent stay warm when the desert cold sets in? Will there be running hot water? Is it safe, clean, and truly relaxing for my family, or will it be another noisy tourist camp?</em>
+            </p>
+            <p>
+                Desert Bloom was established around one uncompromising conviction: <strong>you should never have to sacrifice comfort or peace of mind to touch the raw magic of the dunes.</strong> We bridged the gap between the untamed beauty of the Sam Sand Dunes and the dependable comfort of a boutique retreat—so you can let your guard down and simply be present.
+            </p>
         </div>
-        <div class="h-64 overflow-hidden rounded-lg shadow-md">
-            <img src="/assets/staff.png" alt="Authentic hospitality at Desert Bloom" class="w-full h-full object-cover">
+
+        <!-- PILLARS / TRUST METRICS -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-14">
+            <div class="p-6 bg-white rounded-xl border border-sand-200 shadow-sm flex flex-col justify-start">
+                <div class="w-12 h-12 rounded-lg bg-sand-100 flex items-center justify-center text-amberGold-600 text-xl mb-4">
+                    <i class="fa-solid fa-bed"></i>
+                </div>
+                <h3 class="text-xl font-serif text-sand-900 mb-2 font-bold">Warmth & Restful Sleep</h3>
+                <p class="text-base text-stone-600">
+                    Insulated luxury Swiss tents equipped with reliable climate control, premium bedding, and wind-shielded construction to ensure total coziness no matter how sharp the desert night air turns.
+                </p>
+            </div>
+
+            <div class="p-6 bg-white rounded-xl border border-sand-200 shadow-sm flex flex-col justify-start">
+                <div class="w-12 h-12 rounded-lg bg-sand-100 flex items-center justify-center text-amberGold-600 text-xl mb-4">
+                    <i class="fa-solid fa-bolt"></i>
+                </div>
+                <h3 class="text-xl font-serif text-sand-900 mb-2 font-bold">Unfailing Reliability</h3>
+                <p class="text-base text-stone-600">
+                    24/7 power backup and immaculate private attached washrooms with constant, high-pressure hot water. Your essential daily comforts are never left to chance.
+                </p>
+            </div>
+
+            <div class="p-6 bg-white rounded-xl border border-sand-200 shadow-sm flex flex-col justify-start">
+                <div class="w-12 h-12 rounded-lg bg-sand-100 flex items-center justify-center text-amberGold-600 text-xl mb-4">
+                    <i class="fa-solid fa-shield-heart"></i>
+                </div>
+                <h3 class="text-xl font-serif text-sand-900 mb-2 font-bold">Uncompromising Safety</h3>
+                <p class="text-base text-stone-600">
+                    A respectful, family-first on-ground crew dedicated to ensuring solo travelers, couples, and families feel fully protected, respected, and attended to at all hours.
+                </p>
+            </div>
+
+            <div class="p-6 bg-white rounded-xl border border-sand-200 shadow-sm flex flex-col justify-start">
+                <div class="w-12 h-12 rounded-lg bg-sand-100 flex items-center justify-center text-amberGold-600 text-xl mb-4">
+                    <i class="fa-solid fa-fire"></i>
+                </div>
+                <h3 class="text-xl font-serif text-sand-900 mb-2 font-bold">Soul Over Spectacle</h3>
+                <p class="text-base text-stone-600">
+                    Curated evenings far from loud commercial noise. Evenings here are defined by intimate bonfires, soulful acoustic melodies from local Manganiyar masters, and the pure desert night.
+                </p>
+            </div>
         </div>
-    </div>
 
-    <h3 class="text-2xl font-serif text-amber-900 mb-4 mt-6">A New Standard in Jaisalmer</h3>
-    <p class="mb-6">
-        By applying a "user-first" design philosophy to our camp, we’ve meticulously curated every detail—from the <strong>24/7 power backup and climate-controlled tents</strong> to the seamless integration of traditional Rajasthani culture. We believe your stay in the <strong>Sam Sand Dunes</strong> should be as smooth and memorable as the devices you use every day.
-    </p>
+        <!-- VISUAL BREAK -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-12">
+            <div class="h-72 overflow-hidden rounded-xl shadow-md">
+                <img src="/assets/staff.png" alt="Comfortable desert camp accommodation in Jaisalmer" class="w-full h-full object-cover transform hover:scale-105 transition duration-500">
+            </div>
+            <div class="h-72 overflow-hidden rounded-xl shadow-md">
+                <img src="/assets/staff.png" alt="Warm hospitality at Desert Bloom" class="w-full h-full object-cover transform hover:scale-105 transition duration-500">
+            </div>
+        </div>
 
-    <p class="mb-6">
-        Whether you are joining us for a <strong>Jaisalmer desert safari</strong> or simply to find peace under the stars, you are experiencing a labor of love—a perfect blend of technology-driven reliability and the warm, open-hearted spirit of Rajasthan.
-    </p>
-</section>
+        <!-- THE GUEST PROMISE (CORE EMOTIONAL CLIMAX) -->
+        <div class="my-16 bg-sand-100 border-l-4 border-amberGold-600 p-8 md:p-10 rounded-r-2xl shadow-sm">
+            <span class="block uppercase tracking-widest text-xs font-semibold text-amberGold-700 mb-2">Our Sacred Commitment</span>
+            <h3 class="text-2xl md:text-3xl font-serif text-sand-900 mb-4 font-bold">You Arrive as Our Guest, You Leave as Our Family</h3>
+            <p class="text-stone-700 leading-relaxed mb-4">
+                In Rajasthan, hospitality has never been treated as a business transaction—it is an ancient, sacred honor known as <em>“Atithi Devo Bhava.”</em> When you pass through our gates, you are not simply checking into a desert camp; you are being welcomed into our home.
+            </p>
+            <p class="text-stone-700 leading-relaxed font-medium">
+                From your first greeting with freshly brewed saffron tea to the quiet morning you wave goodbye across the golden sands, our priority is to make you feel deeply valued, completely at ease, and embraced by friends who truly care.
+            </p>
+        </div>
 
-<div id="footer-placeholder"></div>
+        <!-- CALL TO ACTION / CLOSING -->
+        <div class="text-center pt-8 border-t border-sand-200">
+            <h4 class="text-2xl font-serif text-sand-900 mb-3">Your Desert Retreat Awaits</h4>
+            <p class="text-stone-600 max-w-xl mx-auto mb-8 text-base">
+                Leave every logistic and concern behind. Step onto the warm golden sands, take in the endless horizon, and experience the Thar in its purest, most welcoming form.
+            </p>
+            <a href="/booking.html" class="inline-flex items-center gap-2 bg-amberGold-600 hover:bg-amberGold-700 text-white font-medium px-8 py-4 rounded-lg shadow-md transition duration-200">
+                <span>Explore Tents & Experiences</span>
+                <i class="fa-solid fa-arrow-right text-sm"></i>
+            </a>
+        </div>
+
+    </main>
+
+    <!-- FOOTER PLACEHOLDER -->
+    <div id="footer-placeholder"></div>
 
 </body>
 </html>
