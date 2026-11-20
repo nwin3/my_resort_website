@@ -1,4 +1,32 @@
+// Central website contact details. Update this number in one place.
+const SITE_CONTACT = Object.freeze({
+    phoneDisplay: "+91 9358872644",
+    phoneLink: "tel:+919358872644",
+    whatsappNumber: "919358872644",
+    whatsappBase: "https://wa.me/919358872644"
+});
+
+function applySiteContactDetails(root = document) {
+    root.querySelectorAll("[data-phone-display]").forEach((element) => {
+        element.textContent = SITE_CONTACT.phoneDisplay;
+    });
+
+    root.querySelectorAll('a[href^="tel:"]').forEach((link) => {
+        link.setAttribute("href", SITE_CONTACT.phoneLink);
+    });
+
+    root.querySelectorAll('a[href*="wa.me/"]').forEach((link) => {
+        const href = link.getAttribute("href");
+        const queryIndex = href.indexOf("?");
+        const query = queryIndex >= 0 ? href.substring(queryIndex) : "";
+        link.setAttribute("href", `${SITE_CONTACT.whatsappBase}${query}`);
+    });
+}
+
+window.SITE_CONTACT = SITE_CONTACT;
+
 document.addEventListener("DOMContentLoaded", () => {
+    applySiteContactDetails();
     loadNavbar();
     loadFooter();
 });
@@ -53,6 +81,7 @@ function loadNavbar() {
         })
         .then(html => {
             navPlaceholder.innerHTML = html;
+            applySiteContactDetails(navPlaceholder);
             initMobileToggle();
         })
         .catch(err => console.error("Navbar loading error:", err));
@@ -79,6 +108,7 @@ function loadFooter() {
         })
         .then(html => {
             footerPlaceholder.innerHTML = html;
+            applySiteContactDetails(footerPlaceholder);
         })
         .catch(err => console.error("Footer loading error:", err));
 }
