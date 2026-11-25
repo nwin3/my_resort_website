@@ -1,9 +1,9 @@
 // Central website contact details. Update this number in one place.
 const SITE_CONTACT = Object.freeze({
-    phoneDisplay: "+91 9358872644",
-    phoneLink: "tel:+919358872644",
-    whatsappNumber: "919358872644",
-    whatsappBase: "https://wa.me/919358872644"
+    phoneDisplay: "+91 9358872647",
+    phoneLink: "tel:+919358872647",
+    whatsappNumber: "919358872647",
+    whatsappBase: "https://wa.me/919358872647"
 });
 
 function applySiteContactDetails(root = document) {
